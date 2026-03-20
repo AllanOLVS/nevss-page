@@ -1,0 +1,116 @@
+@import "tailwindcss";
+@config "../../tailwind.config.js";
+
+body {
+    background-color: #07010C;
+    color: #F8FAFC;
+    overflow-x: hidden;
+}
+
+/* Glassmorphism premium geral */
+.glass-panel {
+    background: rgba(30, 5, 51, 0.4);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Navbar Dinâmica Estilo Pílula (Pill Shape) */
+#dynamic-navbar {
+    transition: all 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Estado Rolado da Navbar (Canto Direito) */
+#dynamic-navbar.scrolled {
+    top: 1.5rem !important;
+    left: calc(100% - 2rem) !important;
+    transform: translateX(-100%) !important;
+    background: rgba(30, 5, 51, 0.8);
+    border-color: rgba(255, 69, 0, 0.3);
+}
+
+/* Logo Dinâmico (Inicia no Centro) */
+#dynamic-logo {
+    transition: all 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+    position: fixed;
+    top: 18vh; /* Fixado a 18% do topo do ecrã */
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.2);
+    z-index: 60;
+}
+
+@media (min-width: 768px) {
+    #dynamic-logo {
+        top: 20vh; /* Em desktop, fixado a 20% */
+        transform: translate(-50%, -50%) scale(1.5);
+    }
+}
+
+/* Estado Rolado do Logo (Canto Esquerdo) */
+#dynamic-logo.scrolled {
+    top: 2rem !important;
+    left: 2rem !important;
+    transform: translate(0, 0) scale(0.8) !important;
+}
+
+/* Efeito de fita adesiva */
+.tape {
+    position: absolute;
+    width: 90px;
+    height: 28px;
+    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+    backdrop-filter: blur(4px);
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-2deg);
+    z-index: 10;
+    border-radius: 2px;
+}
+
+.polaroid {
+    background: #fff;
+    padding: 12px 12px 45px 12px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+    position: relative;
+    border-radius: 4px;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.bg-pattern {
+    background-image: radial-gradient(rgba(255, 69, 0, 0.15) 1px, transparent 1px);
+    background-size: 24px 24px;
+}
+
+.parallax-layer {
+    transition: transform 0.1s ease-out;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #07010C;
+}
+::-webkit-scrollbar-thumb {
+    background: #4B107B;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #FF4500;
+}
