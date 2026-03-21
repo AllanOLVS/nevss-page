@@ -1,45 +1,65 @@
 export function FAQ() {
+  const faqs = [
+    {
+      q: 'Vocês atendem empresas de qual segmento?',
+      a: 'Atendemos marcas que possuem alto potencial de escala e buscam um posicionamento premium, independentemente do nicho. Nossos maiores cases estão em e-commerces, clínicas, saúde, moda, gastronomia e infoprodutos.'
+    },
+    {
+      q: 'Qual o investimento mínimo para começar?',
+      a: 'Não trabalhamos com "pacotes de posts". Nossos projetos são personalizados após uma reunião de diagnóstico. Preencha a aplicação abaixo para entendermos seu momento e apresentarmos uma proposta financeira adequada ao seu negócio.'
+    },
+    {
+      q: 'Em quanto tempo vejo resultados reais?',
+      a: 'Os primeiros indicadores de melhoria aparecem nos primeiros 30 dias (engajamento, posicionamento, qualidade do conteúdo). Resultados financeiros consistentes surgem entre 60 e 90 dias, dependendo do segmento e do investimento em tráfego.'
+    },
+    {
+      q: 'Como funciona o processo de Aplicação?',
+      a: 'O formulário de aplicação serve para entendermos se a sua empresa tem o perfil ideal para escalar com a nossa metodologia. Após preencher, nossa equipe analisará e entrará em contato em até 12 horas úteis para agendar uma reunião estratégica.'
+    },
+    {
+      q: 'O contrato tem fidelidade? Posso cancelar?',
+      a: 'Trabalhamos com contratos de 3 meses mínimos para garantir que a estratégia tenha tempo de maturar. Após esse período, o contrato renova mensalmente e pode ser cancelado com 30 dias de aviso prévio, sem multas.'
+    },
+    {
+      q: 'Vocês garantem resultados?',
+      a: 'Garantimos dedicação total, estratégia data-driven e execução de altíssimo nível. Resultados dependem de variáveis como investimento em tráfego e engajamento do cliente no processo, mas trabalhamos com metas claras e relatórios transparentes.'
+    },
+    {
+      q: 'Como funciona o acompanhamento e os relatórios?',
+      a: 'Você recebe relatórios quinzenais com métricas detalhadas de performance, além de reuniões mensais de alinhamento estratégico. Temos um canal direto de comunicação para dúvidas e aprovações de conteúdo.'
+    },
+    {
+      q: 'Atendimento é presencial ou 100% digital?',
+      a: 'Nosso atendimento é 100% digital, o que nos permite atender marcas do Brasil inteiro e do exterior. Usamos ferramentas profissionais de gestão de projetos e videoconferência para manter tudo organizado e transparente.'
+    },
+  ];
+
+  const items = faqs.map((f, i) => `
+    <div class="faq-item reveal" style="transition-delay:${i * 60}ms;" data-faq="${i}">
+        <button class="faq-btn" aria-expanded="false">
+            <span>${f.q}</span>
+            <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-content">
+            <p>${f.a}</p>
+        </div>
+    </div>
+  `).join('');
+
   return `
-    <!-- Nova Seção: FAQ (Profissionalismo) -->
-    <section class="py-24 bg-nevss-dark relative border-t border-white/5">
-        <div class="max-w-4xl mx-auto px-6 lg:px-8 reveal">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-display uppercase">Dúvidas <span class="text-nevss-orange">Frequentes</span></h2>
+    <!-- SEÇÃO 09 — FAQ -->
+    <section class="section-padding" style="background:#FFFFFF;">
+        <div class="container-nevss" style="max-width:800px;">
+            <!-- Header -->
+            <div class="reveal" style="text-align:center;margin-bottom:48px;">
+                <h2 class="resp-h2" style="font-size:48px;font-weight:700;color:#1A1A1A;line-height:1.1;margin:0;">
+                    Dúvidas <span style="font-family:'Playfair Display',serif;color:#E8900A;font-style:italic;">Frequentes</span>
+                </h2>
             </div>
 
-            <div class="space-y-4">
-                <!-- FAQ Item 1 -->
-                <div class="glass-panel rounded-lg overflow-hidden border border-white/10">
-                    <button class="faq-btn w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none">
-                        <span class="font-bold text-lg text-white">Vocês atendem empresas de qual segmento?</span>
-                        <i class="fa-solid fa-chevron-down text-nevss-orange transition-transform duration-300"></i>
-                    </button>
-                    <div class="faq-content px-6 pb-5 hidden">
-                        <p class="text-gray-400 font-light">Atendemos marcas que possuem alto potencial de escala e buscam um posicionamento premium, independentemente do nicho. Nossos maiores cases estão em e-commerces, clínicas, saúde, moda e infoprodutos.</p>
-                    </div>
-                </div>
-
-                <!-- FAQ Item 2 -->
-                <div class="glass-panel rounded-lg overflow-hidden border border-white/10">
-                    <button class="faq-btn w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none">
-                        <span class="font-bold text-lg text-white">Qual o investimento mínimo?</span>
-                        <i class="fa-solid fa-chevron-down text-nevss-orange transition-transform duration-300"></i>
-                    </button>
-                    <div class="faq-content px-6 pb-5 hidden">
-                        <p class="text-gray-400 font-light">Não trabalhamos com "pacotes de posts". Nossos projetos são personalizados após uma reunião de diagnóstico. Preencha a aplicação abaixo para entendermos seu momento e apresentarmos uma proposta financeira adequada.</p>
-                    </div>
-                </div>
-
-                <!-- FAQ Item 3 -->
-                <div class="glass-panel rounded-lg overflow-hidden border border-white/10">
-                    <button class="faq-btn w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none">
-                        <span class="font-bold text-lg text-white">O que significa o processo de "Aplicação"?</span>
-                        <i class="fa-solid fa-chevron-down text-nevss-orange transition-transform duration-300"></i>
-                    </button>
-                    <div class="faq-content px-6 pb-5 hidden">
-                        <p class="text-gray-400 font-light">Como entregamos um serviço extremamente focado e de alta qualidade, limitamos nosso número de clientes. O formulário abaixo serve para entendermos se a sua empresa tem o perfil (fit) ideal para escalar com a nossa metodologia no momento atual.</p>
-                    </div>
-                </div>
+            <!-- Accordion -->
+            <div style="display:flex;flex-direction:column;gap:12px;">
+                ${items}
             </div>
         </div>
     </section>
@@ -47,22 +67,38 @@ export function FAQ() {
 }
 
 export function initFAQ() {
-  // FAQ Accordion
-  const faqBtns = document.querySelectorAll('.faq-btn');
-  faqBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-          const content = btn.nextElementSibling;
-          const icon = btn.querySelector('i');
-          
-          document.querySelectorAll('.faq-content').forEach(c => {
-              if(c !== content) {
-                  c.classList.add('hidden');
-                  c.previousElementSibling.querySelector('i').classList.remove('rotate-180');
-              }
-          });
+  const faqItems = document.querySelectorAll('.faq-item');
 
-          content.classList.toggle('hidden');
-          icon.classList.toggle('rotate-180');
+  faqItems.forEach(item => {
+    const btn = item.querySelector('.faq-btn');
+    const content = item.querySelector('.faq-content');
+    const icon = item.querySelector('.faq-icon');
+
+    btn.addEventListener('click', () => {
+      const isOpen = item.classList.contains('active');
+
+      // Close all others
+      faqItems.forEach(other => {
+        if (other !== item) {
+          other.classList.remove('active');
+          other.querySelector('.faq-content').classList.remove('open');
+          other.querySelector('.faq-icon').textContent = '+';
+          other.querySelector('.faq-btn').setAttribute('aria-expanded', 'false');
+        }
       });
+
+      // Toggle current
+      if (isOpen) {
+        item.classList.remove('active');
+        content.classList.remove('open');
+        icon.textContent = '+';
+        btn.setAttribute('aria-expanded', 'false');
+      } else {
+        item.classList.add('active');
+        content.classList.add('open');
+        icon.textContent = '×';
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
   });
 }

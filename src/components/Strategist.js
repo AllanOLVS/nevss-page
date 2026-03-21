@@ -1,51 +1,67 @@
+import stratImg from '../assets/estrat-por-tras-do-jogo.jpg';
+
 export function Strategist() {
   return `
-    <!-- Autoridade (Emily Nevss) -->
-    <section id="estrategista" class="py-32 bg-nevss-purple relative overflow-hidden bg-pattern border-t border-white/5">
-        <!-- Detalhe geométrico de fundo -->
-        <div class="absolute right-0 top-0 w-[40%] h-full bg-nevss-dark transform -skew-x-12 translate-x-20 shadow-2xl z-0"></div>
-        
-        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-            <div class="flex flex-col lg:flex-row items-center gap-16">
-                
-                <!-- Imagem da Emily com estilo editorial/revista -->
-                <div class="w-full lg:w-5/12 relative reveal">
-                    <div class="absolute -inset-4 bg-gradient-to-r from-nevss-orange to-purple-600 opacity-30 blur-2xl rounded-2xl"></div>
-                    <img src="https://images.unsplash.com/photo-1600603405959-6d623e92445c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Emily Nevss - Estrategista" class="relative z-10 w-full h-[650px] object-cover rounded-sm grayscale hover:grayscale-0 transition-all duration-700 shadow-2xl">
-                    
-                    <!-- Selo Profissional -->
-                    <div class="absolute -bottom-8 -right-8 z-20 bg-nevss-dark border border-nevss-orange text-white p-6 rounded-full shadow-2xl flex flex-col items-center justify-center w-32 h-32 animate-spin-slow">
-                        <i class="fa-solid fa-star text-nevss-orange mb-1"></i>
-                        <span class="font-display uppercase text-sm tracking-widest text-center leading-tight">Founder<br>CEO</span>
+    <!-- SEÇÃO 08 — A ESTRATEGISTA -->
+    <section id="estrategista" class="section-padding" style="background:#FAF8F4;position:relative;overflow:hidden;">
+        <!-- Diagonal sutil -->
+        <div style="position:absolute;right:0;top:0;width:40%;height:100%;background:#F2EDE5;transform:skewX(-8deg) translateX(60px);z-index:0;" class="hidden lg:block"></div>
+
+        <div class="container-nevss" style="position:relative;z-index:1;">
+            <div style="display:grid;grid-template-columns:5fr 7fr;gap:48px;align-items:center;" class="strategist-grid">
+
+                <!-- Foto -->
+                <div class="reveal" style="max-width:420px;">
+                    <div style="position:relative;">
+                        <img src="${stratImg}" alt="Emily Nevss - Estrategista" style="width:100%;height:auto;max-height:600px;object-fit:cover;border-radius:20px;filter:grayscale(100%);transition:filter 0.5s ease;" onmouseover="this.style.filter='grayscale(0%)'" onmouseout="this.style.filter='grayscale(100%)'">
+                        
+                        <!-- Badge CEO -->
+                        <div style="position:absolute;bottom:-16px;right:-16px;background:#1A1A1A;border:2px solid #E8900A;border-radius:50%;width:80px;height:80px;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,0,0,0.2);">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="#E8900A"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <span style="font-size:9px;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:0.08em;text-align:center;line-height:1.2;margin-top:2px;">CEO<br>Founder</span>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Copy da Autoridade -->
-                <div class="w-full lg:w-7/12 reveal">
-                    <p class="text-nevss-orange font-bold text-sm tracking-widest uppercase mb-4 flex items-center gap-4">
-                        <span class="w-12 h-px bg-nevss-orange"></span> A Estrategista por trás do jogo
-                    </p>
-                    <h2 class="text-5xl md:text-7xl font-display uppercase text-white mb-8 leading-[0.9]">Emily Nevss</h2>
-                    
-                    <blockquote class="text-2xl md:text-3xl font-hand text-gray-300 leading-relaxed mb-8 relative z-10">
-                        <i class="fa-solid fa-quote-left text-4xl text-nevss-orange/30 absolute -top-4 -left-6 -z-10"></i>
-                        "Não existe concorrência para quem sabe se posicionar. Consistência e estratégia não geram apenas vendas momentâneas, constroem impérios."
-                    </blockquote>
-                    
-                    <p class="text-lg text-gray-400 mb-8 font-light leading-relaxed">
-                        Sou a mente estratégica que tira marcas da invisibilidade. Meu foco não é te dar métricas de vaidade ou posts bonitinhos. Minha agência atua com um único propósito: te dar posicionamento de líder de mercado, autoridade inquestionável e atrair clientes que compram pelo seu valor, e não pelo preço.
+                <!-- Conteúdo -->
+                <div class="reveal">
+                    <p style="font-size:11px;font-weight:700;color:#E8900A;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:16px;">
+                        A Estrategista por trás do jogo
                     </p>
 
-                    <div class="grid grid-cols-2 gap-6 mt-10">
-                        <div class="glass-panel p-6 rounded-xl border border-white/10">
-                            <h4 class="font-display text-4xl text-white mb-2">Visão <span class="text-nevss-orange">360º</span></h4>
-                            <p class="text-sm text-gray-400 font-light">Estratégia, Copywriting, Design e Tráfego alinhados.</p>
+                    <h2 class="resp-h2" style="font-size:48px;font-weight:800;color:#1A1A1A;margin:0 0 20px;text-transform:uppercase;">
+                        EMILY NEVSS
+                    </h2>
+
+                    <!-- Citação -->
+                    <p style="font-family:'Playfair Display',serif;font-size:22px;font-style:italic;color:#E8900A;line-height:1.4;margin:0 0 24px;">
+                        Não existe concorrência para quem sabe se posicionar.
+                    </p>
+
+                    <!-- Bio -->
+                    <p style="font-size:16px;color:#555;line-height:1.7;margin:0 0 16px;">
+                        Sou a mente estratégica que tira marcas da invisibilidade. Meu foco não é te dar métricas de vaidade ou posts bonitinhos — é te entregar posicionamento de líder de mercado e autoridade inquestionável.
+                    </p>
+                    <p style="font-size:16px;color:#555;line-height:1.7;margin:0 0 32px;">
+                        Minha agência atua com um único propósito: atrair clientes que compram pelo seu valor, e não pelo preço. Cada estratégia é construída sob medida e com dedicação total.
+                    </p>
+
+                    <!-- Mini-cards -->
+                    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-bottom:32px;">
+                        <div style="background:#fff;border:0.5px solid #E8900A;border-radius:12px;padding:20px;">
+                            <h4 style="font-size:22px;font-weight:700;color:#1A1A1A;margin:0 0 8px;">Visão <span style="color:#E8900A;">360°</span></h4>
+                            <p style="font-size:13px;color:#666;line-height:1.6;margin:0;">Estratégia, Copywriting, Design e Tráfego alinhados.</p>
                         </div>
-                        <div class="glass-panel p-6 rounded-xl border border-white/10">
-                            <h4 class="font-display text-4xl text-white mb-2">Alta <span class="text-nevss-orange">Demanda</span></h4>
-                            <p class="text-sm text-gray-400 font-light">Atendimento seleto para garantir foco total nos resultados.</p>
+                        <div style="background:#fff;border:0.5px solid #E8900A;border-radius:12px;padding:20px;">
+                            <h4 style="font-size:22px;font-weight:700;color:#1A1A1A;margin:0 0 8px;">Alta <span style="color:#E8900A;">Demanda</span></h4>
+                            <p style="font-size:13px;color:#666;line-height:1.6;margin:0;">Atendimento seleto para garantir foco total nos resultados.</p>
                         </div>
                     </div>
+
+                    <!-- CTA -->
+                    <a href="#aplicacao" class="link-orange" style="font-size:15px;">
+                        Quer trabalhar comigo? → Iniciar aplicação
+                    </a>
                 </div>
 
             </div>

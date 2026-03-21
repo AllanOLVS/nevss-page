@@ -7,58 +7,48 @@ import { ProblemSection } from './components/ProblemSection.js';
 import { Services } from './components/Services.js';
 import { Methodology } from './components/Methodology.js';
 import { Cases } from './components/Cases.js';
+import { Testimonials } from './components/Testimonials.js';
 import { Strategist } from './components/Strategist.js';
 import { FAQ, initFAQ } from './components/FAQ.js';
 import { ApplicationForm } from './components/ApplicationForm.js';
 import { Footer, initFooter } from './components/Footer.js';
 
 document.querySelector('#app').innerHTML = `
-<div class="antialiased selection:bg-nevss-orange selection:text-white relative">
+<div>
   ${Navbar()}
   ${WhatsAppButton()}
-  ${Hero()}
-  ${Marquee()}
-  ${ProblemSection()}
-  ${Services()}
-  ${Methodology()}
-  ${Cases()}
-  ${Strategist()}
-  ${FAQ()}
-  ${ApplicationForm()}
+  <main>
+    ${Hero()}
+    ${Marquee()}
+    ${ProblemSection()}
+    ${Services()}
+    ${Methodology()}
+    ${Cases()}
+    ${Testimonials()}
+    ${Strategist()}
+    ${FAQ()}
+    ${ApplicationForm()}
+  </main>
   ${Footer()}
 </div>
 `;
 
-// Inicialização dos scripts de componentes
+// Initialize interactive components
 initNavbar();
 initFAQ();
 initFooter();
 
-// Scripts globais (scroll reveal e parallax)
-document.addEventListener('mousemove', (e) => {
-    const layers = document.querySelectorAll('.parallax-layer');
-    const x = (window.innerWidth - e.pageX) / 100;
-    const y = (window.innerHeight - e.pageY) / 100;
-
-    layers.forEach(layer => {
-        const speed = layer.getAttribute('data-speed');
-        const xOffset = x * speed * 100;
-        const yOffset = y * speed * 100;
-        layer.style.transform = `translateX(${xOffset}px) translateY(${yOffset}px)`;
+// ─── Scroll Reveal with IntersectionObserver ───
+const revealObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        revealObserver.unobserve(entry.target);
+      }
     });
-});
+  },
+  { threshold: 0.12 }
+);
 
-const reveals = document.querySelectorAll('.reveal');
-const revealOnScroll = () => {
-    const windowHeight = window.innerHeight;
-    const elementVisible = 120;
-
-    reveals.forEach((reveal) => {
-        const elementTop = reveal.getBoundingClientRect().top;
-        if (elementTop < windowHeight - elementVisible) {
-            reveal.classList.add('active');
-        }
-    });
-};
-window.addEventListener('scroll', revealOnScroll);
-revealOnScroll();
+document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el));
