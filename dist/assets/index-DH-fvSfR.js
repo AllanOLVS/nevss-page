@@ -50,7 +50,7 @@
             Iniciar Aplicação
         </a>
     </div>
-  `}function n(){let e=document.getElementById(`site-header`),t=document.getElementById(`mobile-menu-btn`),n=document.getElementById(`mobile-drawer`),r=document.getElementById(`mobile-overlay`),i=document.querySelectorAll(`.drawer-link`),a=()=>{window.scrollY>80?(e.classList.add(`scrolled`),document.body.classList.add(`scrolled-body`)):(e.classList.remove(`scrolled`),document.body.classList.remove(`scrolled-body`))};window.addEventListener(`scroll`,a,{passive:!0}),a();let o=()=>{n.classList.add(`open`),r.classList.add(`open`),document.body.style.overflow=`hidden`},s=()=>{n.classList.remove(`open`),r.classList.remove(`open`),document.body.style.overflow=``};t.addEventListener(`click`,o),r.addEventListener(`click`,s),i.forEach(e=>e.addEventListener(`click`,s))}function r(){return`
+  `}function n(){let e=document.getElementById(`site-header`),t=document.getElementById(`mobile-menu-btn`),n=document.getElementById(`mobile-drawer`),r=document.getElementById(`mobile-overlay`),i=document.querySelectorAll(`.drawer-link`),a=()=>{window.scrollY>80?(e.classList.add(`scrolled`),document.body.classList.add(`scrolled-body`)):(e.classList.remove(`scrolled`),document.body.classList.remove(`scrolled-body`))};window.addEventListener(`scroll`,a,{passive:!0}),a();let o=()=>{n.style.top=e.classList.contains(`scrolled`)?`70px`:`90px`,n.classList.add(`open`),r.classList.add(`open`),document.body.style.overflow=`hidden`},s=()=>{n.classList.remove(`open`),r.classList.remove(`open`),document.body.style.overflow=``};t.addEventListener(`click`,()=>{n.classList.contains(`open`)?s():o()}),r.addEventListener(`click`,s),i.forEach(e=>e.addEventListener(`click`,s))}function r(){return`
     <!-- WhatsApp Flutuante — Laranja da marca -->
     <a href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer" class="whatsapp-btn" aria-label="Fale conosco no WhatsApp">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="#FFFFFF">
@@ -194,44 +194,40 @@
     </section>
   `}function o(){return`
     <!-- BAND DE LOGOS — #1A1A1A -->
-    <section style="background:#1A1A1A;padding:24px 0;overflow:hidden;">
-        <p class="reveal" style="text-align:center;font-size:13px;color:rgba(255,255,255,0.4);margin:0 0 16px;font-weight:400;">
+    <section style="background:#3d1e6e;padding:24px 0;overflow:hidden;">
+        <p class="reveal" style="text-align:center;font-size:13px;color:#e8d5f5;margin:0 0 16px;font-weight:400;">
             Marcas que confiam na Nevss
         </p>
-        <div style="overflow:hidden;position:relative;">
+        <div style="overflow:hidden;position:relative;-webkit-mask-image:linear-gradient(to right,transparent 0%,#3d1e6e 10%,#3d1e6e 90%,transparent 100%);mask-image:linear-gradient(to right,transparent 0%,#3d1e6e 10%,#3d1e6e 90%,transparent 100%);">
             <div class="marquee-track" style="display:flex;gap:32px;align-items:center;">
                 ${[`MARCA PREMIUM`,`STUDIO DESIGN`,`ELITE MODA`,`CLÍNICA ESTÉTICA`,`TECH SOLUTIONS`,`GOURMET HOUSE`,`BEAUTY CONCEPT`,`FIT ACADEMY`,`MARCA PREMIUM`,`STUDIO DESIGN`,`ELITE MODA`,`CLÍNICA ESTÉTICA`,`TECH SOLUTIONS`,`GOURMET HOUSE`,`BEAUTY CONCEPT`,`FIT ACADEMY`].map(e=>`
-    <span style="font-size:15px;font-weight:600;letter-spacing:0.08em;color:rgba(255,255,255,0.5);white-space:nowrap;">${e}</span>
-    <span style="color:rgba(255,255,255,0.2);font-size:20px;">✦</span>
+    <span style="font-size:15px;font-weight:600;letter-spacing:0.08em;color:#FFFFFF;white-space:nowrap;transition:color 0.3s ease;" onmouseover="this.style.color='#D4A017'" onmouseout="this.style.color='#FFFFFF'">${e}</span>
+    <span style="color:#D4A017;font-size:20px;">✦</span>
   `).join(``)}
             </div>
         </div>
     </section>
-  `}function s(){return`
+  `}var s=`/assets/img1-woaSNkTQ.jpeg`,c=`/assets/img2-CIR9BDsG.jpeg`,l=`/assets/img3-Dwig5xGj.jpeg`;function u(){return`
     <!-- SEÇÃO 03 — DOR / PROBLEMA -->
-    <section class="section-padding" style="background:#FAF8F4;">
+    <section class="section-padding" style="background:#F5F0EB;">
         <div class="container-nevss">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+            <div class="problem-layout">
 
-                <!-- COLUNA ESQUERDA: Texto (55%) -->
-                <div class="lg:col-span-7 order-2 lg:order-1 reveal">
-                    <!-- Tag -->
-                    <p style="font-size:11px;font-weight:700;color:#E79032;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:16px;">
+                <!-- COLUNA ESQUERDA: Texto -->
+                <div class="problem-text reveal">
+                    <p style="font-size:11px;font-weight:700;color:#F97316;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:16px;">
                         Por que sua marca está travada?
                     </p>
 
-                    <!-- Headline -->
                     <h2 class="resp-h2" style="font-size:48px;font-weight:700;color:#1A1A1A;line-height:1.1;margin:0 0 20px;">
                         Sem tempo para cuidar das<br>
-                        <span style="font-family:'Playfair Display',serif;color:#E79032;font-style:italic;">redes sociais?</span>
+                        <span style="font-family:'Playfair Display',serif;color:#F97316;font-style:italic;">redes sociais?</span>
                     </h2>
 
-                    <!-- Parágrafo -->
                     <p style="font-size:16px;color:#555;line-height:1.7;margin-bottom:28px;max-width:520px;">
                         Enquanto você tenta fazer tudo sozinho, seus concorrentes já investem em estratégia real. Cada dia sem posicionamento é um dia que afasta o cliente ideal da sua marca.
                     </p>
 
-                    <!-- Lista de problemas -->
                     <ul style="list-style:none;padding:0;margin:0 0 24px;display:flex;flex-direction:column;gap:14px;">
                         <li style="display:flex;align-items:flex-start;gap:12px;">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2.5" stroke-linecap="round" style="flex-shrink:0;margin-top:2px;"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
@@ -247,63 +243,29 @@
                         </li>
                     </ul>
 
-                    <!-- Resolução -->
                     <div style="display:flex;align-items:flex-start;gap:12px;margin-bottom:28px;">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.5" stroke-linecap="round" style="flex-shrink:0;margin-top:2px;"><polyline points="20 6 9 17 4 12"/></svg>
                         <span style="font-size:15px;color:#1A1A1A;font-weight:700;">É hora de construir um ecossistema magnético.</span>
                     </div>
 
-                    <!-- CTA -->
                     <a href="#metodologia" class="link-orange">
                         Entenda o método →
                     </a>
                 </div>
 
-                <!-- COLUNA DIREITA: Visual (45%) -->
-                <div class="lg:col-span-5 order-1 lg:order-2 reveal">
-                    <div style="position:relative;max-width:320px;margin:0 auto;">
-                        <!-- Mockup: Celular com feed -->
-                        <div style="background:#fff;border-radius:20px;border:0.5px solid #E5E0D8;padding:16px;box-shadow:0 8px 32px rgba(0,0,0,0.08);">
-                            <!-- Phone header -->
-                            <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid #F2EDE5;">
-                                <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#E79032,#F5B041);display:flex;align-items:center;justify-content:center;">
-                                    <span style="color:#fff;font-weight:800;font-size:14px;">N</span>
-                                </div>
-                                <div>
-                                    <p style="margin:0;font-size:13px;font-weight:700;color:#1A1A1A;">@suamarca</p>
-                                    <p style="margin:0;font-size:10px;color:#999;">Antes da Nevss</p>
-                                </div>
-                            </div>
-                            <!-- Feed items -->
-                            <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:4px;margin-bottom:12px;">
-                                <div style="background:#E5E0D8;border-radius:4px;aspect-ratio:1;"></div>
-                                <div style="background:#D9D4CC;border-radius:4px;aspect-ratio:1;"></div>
-                                <div style="background:#E5E0D8;border-radius:4px;aspect-ratio:1;"></div>
-                                <div style="background:#D9D4CC;border-radius:4px;aspect-ratio:1;"></div>
-                                <div style="background:#E5E0D8;border-radius:4px;aspect-ratio:1;"></div>
-                                <div style="background:#D9D4CC;border-radius:4px;aspect-ratio:1;"></div>
-                            </div>
-                            <!-- Stats -->
-                            <div style="display:flex;justify-content:space-around;padding:8px 0;border-top:1px solid #F2EDE5;">
-                                <div style="text-align:center;">
-                                    <p style="margin:0;font-size:14px;font-weight:700;color:#DC2626;">124</p>
-                                    <p style="margin:0;font-size:9px;color:#999;">seguidores</p>
-                                </div>
-                                <div style="text-align:center;">
-                                    <p style="margin:0;font-size:14px;font-weight:700;color:#DC2626;">0.3%</p>
-                                    <p style="margin:0;font-size:9px;color:#999;">engajamento</p>
-                                </div>
-                                <div style="text-align:center;">
-                                    <p style="margin:0;font-size:14px;font-weight:700;color:#DC2626;">0</p>
-                                    <p style="margin:0;font-size:9px;color:#999;">vendas</p>
-                                </div>
-                            </div>
+                <!-- COLUNA DIREITA: Galeria — 3 fotos empilhadas em cascata -->
+                <div class="problem-gallery reveal">
+                    <div class="photo-stack">
+                        <div class="photo-stack__item photo-stack__item--1">
+                            <span class="collage-tag">BASTIDORES REAIS ✦</span>
+                            <img src="${s}" alt="Mulher sendo filmada por duas câmeras em estúdio" />
                         </div>
-
-                        <!-- Card flutuante: transformação -->
-                        <div class="animate-float" style="position:absolute;bottom:-16px;right:-8px;background:#1A1A1A;color:#fff;border-radius:12px;padding:14px 18px;box-shadow:0 4px 20px rgba(0,0,0,0.15);z-index:3;animation-delay:1s;">
-                            <p style="margin:0;font-size:11px;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px;">Depois da Nevss</p>
-                            <p style="margin:0;font-size:18px;font-weight:700;color:#E79032;">+240% alcance</p>
+                        <div class="photo-stack__item photo-stack__item--2">
+                            <span class="collage-badge">produção profissional</span>
+                            <img src="${c}" alt="Câmera em close filmando mulher ao fundo" />
+                        </div>
+                        <div class="photo-stack__item photo-stack__item--3">
+                            <img src="${l}" alt="Vista geral do set com câmeras, luzes e mulher ao centro" />
                         </div>
                     </div>
                 </div>
@@ -311,7 +273,7 @@
             </div>
         </div>
     </section>
-  `}function c(){return`
+  `}function d(){return`
     <!-- SEÇÃO 04 — ECOSSISTEMA / SERVIÇOS -->
     <section id="servicos" class="section-padding" style="background:#FFFFFF;">
         <div class="container-nevss">
@@ -352,7 +314,7 @@
             </div>
         </div>
     </section>
-  `}function l(){return`
+  `}function f(){return`
     <!-- SEÇÃO 05 — MÉTODO DE ESCALA -->
     <section id="metodologia" class="section-padding" style="background:#F2EDE5;">
         <div class="container-nevss" style="text-align:center;">
@@ -402,43 +364,43 @@
             </div>
         </div>
     </section>
-  `}var u=`/assets/nevss-dress-DiqEQPjA.png`;function d(){return`
+  `}var p=`/assets/nevss-dress-DiqEQPjA.png`;function m(){return`
     <!-- SEÇÃO 06 — RESULTADOS / CASES -->
-    <section id="cases" class="section-padding" style="background:#1A1A1A;">
+    <section id="cases" class="section-padding" style="background:#512888;">
         <div class="container-nevss">
             <!-- Header -->
             <div class="reveal" style="text-align:center;margin-bottom:48px;">
                 <h2 class="resp-h2" style="font-size:48px;font-weight:700;color:#fff;line-height:1.1;margin:0 0 16px;">
-                    A Ideia VS <span style="font-family:'Playfair Display',serif;color:#E79032;font-style:italic;">O Resultado</span>
+                    A Ideia VS <span style="font-family:'Playfair Display',serif;color:#D4A017;font-style:italic;">O Resultado</span>
                 </h2>
-                <p style="font-size:16px;color:rgba(255,255,255,0.6);max-width:560px;margin:0 auto;line-height:1.6;">
+                <p style="font-size:16px;color:#e8d5f5;max-width:560px;margin:0 auto;line-height:1.6;">
                     Não vendemos posts, vendemos percepção de valor. Veja como transformamos negócios genéricos em líderes de segmento.
                 </p>
             </div>
 
             <!-- Grid -->
             <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:24px;" class="cases-grid">
-                ${[{segment:`E-COMMERCE DE MODA`,title:`Rebranding & Tráfego`,metric:`+240% de alcance orgânico`,gradient:`linear-gradient(135deg, #1A1A1A 0%, #333 100%)`},{segment:`CLÍNICA DE ESTÉTICA`,title:`Captação & Posicionamento`,metric:`Agenda lotada por 3 meses`,gradient:`linear-gradient(135deg, #2A2015 0%, #1A1A1A 100%)`}].map((e,t)=>`
-    <div class="case-card reveal" style="transition-delay:${t*200}ms;height:400px;">
+                ${[{segment:`E-COMMERCE DE MODA`,title:`Rebranding & Tráfego`,metric:`+240% de alcance orgânico`,gradient:`linear-gradient(135deg, #3d1e6e 0%, #3d1e6e 100%)`},{segment:`CLÍNICA DE ESTÉTICA`,title:`Captação & Posicionamento`,metric:`Agenda lotada por 3 meses`,gradient:`linear-gradient(135deg, #3d1e6e 0%, #3d1e6e 100%)`}].map((e,t)=>`
+    <div class="case-card reveal" style="transition-delay:${t*200}ms;height:400px;border:1px solid #6b35a8;">
         <!-- Background visual (gradient placeholder for real images) -->
         <div style="position:absolute;inset:0;background:${e.gradient};"></div>
         <!-- Case image -->
         <div style="position:absolute;top:30px;left:30px;right:30px;bottom:110px;overflow:hidden;border-radius:12px;">
-            <img src="${u}" alt="Case ${e.segment}" style="width:100%;height:100%;object-fit:cover;opacity:0.7;transition:opacity 0.4s ease,transform 0.4s ease;">
+            <img src="${p}" alt="Case ${e.segment}" style="width:100%;height:100%;object-fit:cover;opacity:0.7;transition:opacity 0.4s ease,transform 0.4s ease;">
         </div>
         <!-- Overlay -->
         <div class="overlay"></div>
         <!-- Tag -->
         <div style="position:absolute;top:20px;left:20px;z-index:2;">
-            <span style="display:inline-block;padding:6px 14px;background:#E79032;color:#fff;font-size:11px;font-weight:700;border-radius:20px;letter-spacing:0.04em;">
+            <span style="display:inline-block;padding:6px 14px;background:#D4A017;color:#FFFFFF;font-size:11px;font-weight:700;border-radius:20px;letter-spacing:0.04em;">
                 ${e.segment}
             </span>
         </div>
         <!-- Content bottom -->
         <div style="position:absolute;bottom:0;left:0;right:0;padding:24px;z-index:2;">
             <h3 style="font-size:22px;font-weight:700;color:#fff;margin:0 0 8px;">${e.title}</h3>
-            <p style="font-size:15px;font-weight:700;color:#E79032;margin:0 0 12px;">${e.metric}</p>
-            <a href="#" style="font-size:13px;color:#fff;text-decoration:underline;text-underline-offset:3px;">Ver case completo →</a>
+            <p style="font-size:15px;font-weight:700;color:#D4A017;margin:0 0 12px;">${e.metric}</p>
+            <a href="#" style="font-size:13px;color:#e8d5f5;text-decoration:underline;text-underline-offset:3px;" onmouseover="this.style.color='#D4A017'" onmouseout="this.style.color='#e8d5f5'">Ver case completo →</a>
         </div>
     </div>
   `).join(``)}
@@ -446,14 +408,14 @@
 
             <!-- Bottom line -->
             <div class="reveal" style="text-align:center;margin-top:48px;">
-                <p style="font-size:16px;color:rgba(255,255,255,0.7);margin:0 0 12px;">
+                <p style="font-size:16px;color:#e8d5f5;margin:0 0 12px;">
                     Mais de <strong style="color:#fff;">20 marcas</strong> transformadas em líderes de segmento
                 </p>
-                <a href="#" class="link-orange" style="color:#E79032;">Ver todos os resultados →</a>
+                <a href="#" class="link-orange" style="color:#D4A017;">Ver todos os resultados →</a>
             </div>
         </div>
     </section>
-  `}function f(){let e=[,,,,,].fill(`<svg width="16" height="16" viewBox="0 0 24 24" fill="#E79032"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`).join(``);return`
+  `}function h(){let e=[,,,,,].fill(`<svg width="16" height="16" viewBox="0 0 24 24" fill="#E79032"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`).join(``);return`
     <!-- SEÇÃO 07 — DEPOIMENTOS -->
     <section class="section-padding" style="background:#FAF8F4;">
         <div class="container-nevss">
@@ -500,7 +462,7 @@
             </div>
         </div>
     </section>
-  `}var p=`/assets/estrat-por-tras-do-jogo-3GlhDv77.jpg`;function m(){return`
+  `}var g=`/assets/estrat-por-tras-do-jogo-3GlhDv77.jpg`;function _(){return`
     <!-- SEÇÃO 08 — A ESTRATEGISTA -->
     <section id="estrategista" class="section-padding" style="background:#FAF8F4;position:relative;overflow:hidden;">
         <!-- Diagonal sutil -->
@@ -512,7 +474,7 @@
                 <!-- Foto -->
                 <div class="reveal" style="max-width:420px;">
                     <div style="position:relative;">
-                        <img src="${p}" alt="Emily Nevss - Estrategista" style="width:100%;height:auto;object-fit:cover;border-radius:20px;filter:grayscale(100%);transition:filter 0.5s ease;image-rendering:auto;" onmouseover="this.style.filter='grayscale(0%)'" onmouseout="this.style.filter='grayscale(100%)'">
+                        <img src="${g}" alt="Emily Nevss - Estrategista" style="width:100%;height:auto;object-fit:cover;border-radius:20px;filter:grayscale(100%);transition:filter 0.5s ease;image-rendering:auto;" onmouseover="this.style.filter='grayscale(0%)'" onmouseout="this.style.filter='grayscale(100%)'">
                         
                         <!-- Badge CEO -->
                         <div style="position:absolute;bottom:-16px;right:-16px;background:#1A1A1A;border:2px solid #E79032;border-radius:50%;width:80px;height:80px;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,0,0,0.2);">
@@ -566,13 +528,13 @@
             </div>
         </div>
     </section>
-  `}function h(){return`
+  `}function v(){return`
     <!-- SEÇÃO 09 — FAQ -->
-    <section class="section-padding" style="background:#1A1A1A;">
+    <section class="section-padding" style="background:#FFFFFF;">
         <div class="container-nevss" style="max-width:800px;">
             <!-- Header -->
             <div class="reveal" style="text-align:center;margin-bottom:48px;">
-                <h2 class="resp-h2" style="font-size:48px;font-weight:700;color:#FFFFFF;line-height:1.1;margin:0;">
+                <h2 class="resp-h2" style="font-size:48px;font-weight:700;color:#1A1A1A;line-height:1.1;margin:0;">
                     Dúvidas <span style="font-family:'Playfair Display',serif;color:#E79032;font-style:italic;">Frequentes</span>
                 </h2>
             </div>
@@ -593,19 +555,19 @@
             </div>
         </div>
     </section>
-  `}function g(){let e=document.querySelectorAll(`.faq-item`);e.forEach(t=>{let n=t.querySelector(`.faq-btn`),r=t.querySelector(`.faq-content`),i=t.querySelector(`.faq-icon`);n.addEventListener(`click`,()=>{let a=t.classList.contains(`faq-open`);e.forEach(e=>{e!==t&&(e.classList.remove(`faq-open`),e.querySelector(`.faq-content`).classList.remove(`open`),e.querySelector(`.faq-icon`).textContent=`+`,e.querySelector(`.faq-btn`).setAttribute(`aria-expanded`,`false`))}),a?(t.classList.remove(`faq-open`),r.classList.remove(`open`),i.textContent=`+`,n.setAttribute(`aria-expanded`,`false`)):(t.classList.add(`faq-open`),r.classList.add(`open`),i.textContent=`×`,n.setAttribute(`aria-expanded`,`true`))})})}function _(){return`
+  `}function y(){let e=document.querySelectorAll(`.faq-item`);e.forEach(t=>{let n=t.querySelector(`.faq-btn`),r=t.querySelector(`.faq-content`),i=t.querySelector(`.faq-icon`);n.addEventListener(`click`,()=>{let a=t.classList.contains(`faq-open`);e.forEach(e=>{e!==t&&(e.classList.remove(`faq-open`),e.querySelector(`.faq-content`).classList.remove(`open`),e.querySelector(`.faq-icon`).textContent=`+`,e.querySelector(`.faq-btn`).setAttribute(`aria-expanded`,`false`))}),a?(t.classList.remove(`faq-open`),r.classList.remove(`open`),i.textContent=`+`,n.setAttribute(`aria-expanded`,`false`)):(t.classList.add(`faq-open`),r.classList.add(`open`),i.textContent=`×`,n.setAttribute(`aria-expanded`,`true`))})})}function b(){return`
     <!-- SEÇÃO 10 — CTA FINAL / FORMULÁRIO -->
-    <section id="aplicacao" class="section-padding" style="background:#1A1A1A;">
+    <section id="aplicacao" class="section-padding" style="background:#512888;">
         <div class="container-nevss">
             <!-- Header -->
             <div class="reveal" style="text-align:center;margin-bottom:56px;">
-                <p style="font-size:11px;font-weight:700;color:#E79032;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:12px;">
+                <p style="font-size:11px;font-weight:700;color:#D4A017;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:12px;">
                     Vagas Limitadas
                 </p>
                 <h2 class="resp-h2" style="font-size:48px;font-weight:700;color:#fff;line-height:1.1;margin:0 0 12px;">
-                    Aplicação para <span style="font-family:'Playfair Display',serif;color:#E79032;font-style:italic;">Parceria</span>
+                    Aplicação para <span style="font-family:'Playfair Display',serif;color:#D4A017;font-style:italic;">Parceria</span>
                 </h2>
-                <p style="font-size:16px;color:rgba(255,255,255,0.6);margin:0;">
+                <p style="font-size:16px;color:#e8d5f5;margin:0;">
                     Tome a decisão que vai mudar o rumo da sua marca.
                 </p>
             </div>
@@ -615,8 +577,8 @@
 
                 <!-- Coluna processo -->
                 <div class="reveal">
-                    <p style="font-size:14px;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:32px;text-align:center;">
-                        Dar o próximo passo leva menos de <span style="font-family:'Playfair Display',serif;font-style:italic;color:#FFFFFF;font-size:16px;text-shadow:0 0 12px rgba(231, 144, 50,0.6);">um minuto</span>
+                    <p style="font-size:14px;font-weight:700;color:#e8d5f5;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:32px;text-align:center;">
+                        Dar o próximo passo leva menos de <span style="font-family:'Playfair Display',serif;font-style:italic;color:#D4A017;font-size:16px;font-weight:bold;text-shadow:0 0 12px rgba(212, 160, 23,0.6);">um minuto</span>
                     </p>
 
                     <div class="steps-column">
@@ -625,7 +587,7 @@
                             <span class="step-number">1</span>
                             <div class="step-card-body">
                                 <div class="step-icon step-icon--red">
-                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E79032" stroke-width="2.2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D4A017" stroke-width="2.2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
                                 </div>
                                 <div>
                                     <h4 class="step-title">Preencha o formulário</h4>
@@ -637,8 +599,8 @@
                         <!-- Connector 1→2 -->
                         <div class="step-connector">
                             <svg width="24" height="40" viewBox="0 0 24 40" fill="none">
-                                <path d="M12 0 v32" stroke="#4CAF50" stroke-width="2.5" stroke-dasharray="6 5" stroke-linecap="round"/>
-                                <polygon points="12,40 6,32 18,32" fill="#4CAF50"/>
+                                <path d="M12 0 v32" stroke="#6b35a8" stroke-width="2.5" stroke-dasharray="6 5" stroke-linecap="round"/>
+                                <polygon points="12,40 6,32 18,32" fill="#6b35a8"/>
                             </svg>
                         </div>
 
@@ -651,7 +613,7 @@
                                     <p class="step-desc">Em até 12 horas, um dos nossos especialistas fará uma ligação para agendar a reunião mais importante com você.</p>
                                 </div>
                                 <div class="step-icon step-icon--red">
-                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E79032" stroke-width="2.2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D4A017" stroke-width="2.2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                                 </div>
                             </div>
                         </div>
@@ -659,8 +621,8 @@
                         <!-- Connector 2→3 -->
                         <div class="step-connector">
                             <svg width="24" height="40" viewBox="0 0 24 40" fill="none">
-                                <path d="M12 0 v32" stroke="#4CAF50" stroke-width="2.5" stroke-dasharray="6 5" stroke-linecap="round"/>
-                                <polygon points="12,40 6,32 18,32" fill="#4CAF50"/>
+                                <path d="M12 0 v32" stroke="#6b35a8" stroke-width="2.5" stroke-dasharray="6 5" stroke-linecap="round"/>
+                                <polygon points="12,40 6,32 18,32" fill="#6b35a8"/>
                             </svg>
                         </div>
 
@@ -669,7 +631,7 @@
                             <span class="step-number">3</span>
                             <div class="step-card-body">
                                 <div class="step-icon step-icon--red">
-                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E79032" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D4A017" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
                                 </div>
                                 <div>
                                     <h4 class="step-title">Reunião Estratégica</h4>
@@ -681,7 +643,7 @@
                 </div>
 
                 <!-- Formulário -->
-                <div class="reveal" style="background:#fff;border-radius:20px;padding:32px;">
+                <div class="reveal" style="background:#3d1e6e;border:1px solid #6b35a8;border-radius:20px;padding:32px;">
                     <form action="#" method="POST" style="display:flex;flex-direction:column;gap:20px;">
                         <!-- Nome -->
                         <div>
@@ -720,13 +682,13 @@
                         </div>
 
                         <!-- Submit -->
-                        <button type="submit" style="width:100%;padding:18px;background:#E79032;color:#fff;font-size:16px;font-weight:700;border:none;border-radius:10px;cursor:pointer;text-transform:uppercase;letter-spacing:0.04em;transition:transform 0.2s ease,box-shadow 0.2s ease;display:flex;align-items:center;justify-content:center;gap:8px;" onmouseover="this.style.transform='scale(1.02)';this.style.boxShadow='0 8px 24px rgba(231, 144, 50,0.35)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+                        <button type="submit" style="width:100%;padding:18px;background:#D4A017;color:#fff;font-size:16px;font-weight:700;border:none;border-radius:10px;cursor:pointer;text-transform:uppercase;letter-spacing:0.04em;transition:transform 0.2s ease,box-shadow 0.2s ease,background-color 0.2s ease;display:flex;align-items:center;justify-content:center;gap:8px;" onmouseover="this.style.transform='scale(1.02)';this.style.boxShadow='0 8px 24px rgba(212, 160, 23,0.35)';this.style.backgroundColor='#b8860b'" onmouseout="this.style.transform='';this.style.boxShadow='';this.style.backgroundColor='#D4A017'">
                             ENVIAR MINHA APLICAÇÃO
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
                         </button>
 
                         <!-- Micro-copy -->
-                        <p style="text-align:center;font-size:12px;color:#999;margin:0;">
+                        <p style="text-align:center;font-size:12px;color:#e8d5f5;margin:0;">
                             🔒 Seus dados estão 100% seguros e sob sigilo absoluto
                         </p>
                     </form>
@@ -735,28 +697,28 @@
             </div>
         </div>
     </section>
-  `}var v=`/assets/logo-nevss-sFundo1-szFAM3RX.png`;function y(){return`
+  `}var x=`/assets/logo-nevss-sFundo1-szFAM3RX.png`;function S(){return`
     <!-- FOOTER -->
-    <footer style="background:#1A1A1A;padding-top:80px;padding-bottom:0;">
+    <footer style="background:#3d1e6e;padding-top:80px;padding-bottom:0;border-top:1px solid #6b35a8;">
         <div class="container-nevss">
             <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:40px;padding-bottom:48px;" class="footer-grid">
 
                 <!-- Coluna 1: Marca -->
                 <div>
                     <a href="#" style="display:inline-block;margin-bottom:20px;">
-                        <img src="${v}" alt="Agência Nevss" style="height:36px;width:auto;">
+                        <img src="${x}" alt="Agência Nevss" style="height:36px;width:auto;filter:brightness(1.1);">
                     </a>
-                    <p style="font-size:13px;color:rgba(255,255,255,0.6);line-height:1.7;margin:0 0 20px;">
+                    <p style="font-size:13px;color:#e8d5f5;line-height:1.7;margin:0 0 20px;">
                         A agência de marketing e branding focada em criar marcas inesquecíveis e posicionamento premium de alto valor.
                     </p>
                     <div style="display:flex;gap:10px;">
-                        <a href="#" style="width:40px;height:40px;background:#2A2A2A;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;transition:background 0.2s ease;" onmouseover="this.style.background='#E79032'" onmouseout="this.style.background='#2A2A2A'">
+                        <a href="#" style="width:40px;height:40px;background:#2a1250;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;transition:background 0.2s ease;" onmouseover="this.style.background='#D4A017'" onmouseout="this.style.background='#2a1250'">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
                         </a>
-                        <a href="#" style="width:40px;height:40px;background:#2A2A2A;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;transition:background 0.2s ease;" onmouseover="this.style.background='#E79032'" onmouseout="this.style.background='#2A2A2A'">
+                        <a href="#" style="width:40px;height:40px;background:#2a1250;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;transition:background 0.2s ease;" onmouseover="this.style.background='#D4A017'" onmouseout="this.style.background='#2a1250'">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.11V9.02a6.27 6.27 0 00-.79-.05A6.34 6.34 0 003.15 15.3a6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V8.66a8.17 8.17 0 004.76 1.52v-3.4a4.85 4.85 0 01-1-.09z"/></svg>
                         </a>
-                        <a href="#" style="width:40px;height:40px;background:#2A2A2A;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;transition:background 0.2s ease;" onmouseover="this.style.background='#E79032'" onmouseout="this.style.background='#2A2A2A'">
+                        <a href="#" style="width:40px;height:40px;background:#2a1250;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;transition:background 0.2s ease;" onmouseover="this.style.background='#D4A017'" onmouseout="this.style.background='#2a1250'">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
                         </a>
                     </div>
@@ -766,11 +728,11 @@
                 <div>
                     <h4 style="font-size:11px;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:0.08em;margin:0 0 20px;">Mapa do Site</h4>
                     <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:12px;">
-                        <li><a href="#servicos" style="font-size:14px;color:rgba(255,255,255,0.6);text-decoration:none;transition:all 0.2s ease;display:inline-block;" onmouseover="this.style.color='#fff';this.style.transform='translateX(4px)'" onmouseout="this.style.color='rgba(255,255,255,0.6)';this.style.transform=''">Nosso Ecossistema</a></li>
-                        <li><a href="#metodologia" style="font-size:14px;color:rgba(255,255,255,0.6);text-decoration:none;transition:all 0.2s ease;display:inline-block;" onmouseover="this.style.color='#fff';this.style.transform='translateX(4px)'" onmouseout="this.style.color='rgba(255,255,255,0.6)';this.style.transform=''">Metodologia Nevss</a></li>
-                        <li><a href="#cases" style="font-size:14px;color:rgba(255,255,255,0.6);text-decoration:none;transition:all 0.2s ease;display:inline-block;" onmouseover="this.style.color='#fff';this.style.transform='translateX(4px)'" onmouseout="this.style.color='rgba(255,255,255,0.6)';this.style.transform=''">Resultados & Cases</a></li>
-                        <li><a href="#estrategista" style="font-size:14px;color:rgba(255,255,255,0.6);text-decoration:none;transition:all 0.2s ease;display:inline-block;" onmouseover="this.style.color='#fff';this.style.transform='translateX(4px)'" onmouseout="this.style.color='rgba(255,255,255,0.6)';this.style.transform=''">Emily Nevss (CEO)</a></li>
-                        <li><a href="#aplicacao" style="font-size:14px;color:#E79032;font-weight:700;text-decoration:none;transition:all 0.2s ease;display:inline-block;" onmouseover="this.style.transform='translateX(4px)'" onmouseout="this.style.transform=''">Aplicar para Assessoria</a></li>
+                        <li><a href="#servicos" style="font-size:14px;color:#e8d5f5;text-decoration:none;transition:all 0.2s ease;display:inline-block;" onmouseover="this.style.color='#D4A017';this.style.transform='translateX(4px)'" onmouseout="this.style.color='#e8d5f5';this.style.transform=''">Nosso Ecossistema</a></li>
+                        <li><a href="#metodologia" style="font-size:14px;color:#e8d5f5;text-decoration:none;transition:all 0.2s ease;display:inline-block;" onmouseover="this.style.color='#D4A017';this.style.transform='translateX(4px)'" onmouseout="this.style.color='#e8d5f5';this.style.transform=''">Metodologia Nevss</a></li>
+                        <li><a href="#cases" style="font-size:14px;color:#e8d5f5;text-decoration:none;transition:all 0.2s ease;display:inline-block;" onmouseover="this.style.color='#D4A017';this.style.transform='translateX(4px)'" onmouseout="this.style.color='#e8d5f5';this.style.transform=''">Resultados & Cases</a></li>
+                        <li><a href="#estrategista" style="font-size:14px;color:#e8d5f5;text-decoration:none;transition:all 0.2s ease;display:inline-block;" onmouseover="this.style.color='#D4A017';this.style.transform='translateX(4px)'" onmouseout="this.style.color='#e8d5f5';this.style.transform=''">Emily Nevss (CEO)</a></li>
+                        <li><a href="#aplicacao" style="font-size:14px;color:#D4A017;font-weight:700;text-decoration:none;transition:all 0.2s ease;display:inline-block;" onmouseover="this.style.transform='translateX(4px)'" onmouseout="this.style.transform=''">Aplicar para Assessoria</a></li>
                     </ul>
                 </div>
 
@@ -779,16 +741,16 @@
                     <h4 style="font-size:11px;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:0.08em;margin:0 0 20px;">Fale Conosco</h4>
                     <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:16px;">
                         <li style="display:flex;align-items:flex-start;gap:10px;">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E79032" stroke-width="2" stroke-linecap="round" style="flex-shrink:0;margin-top:2px;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                            <a href="mailto:contato@agencianevss.com" style="font-size:14px;color:rgba(255,255,255,0.6);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">contato@agencianevss.com</a>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4A017" stroke-width="2" stroke-linecap="round" style="flex-shrink:0;margin-top:2px;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            <a href="mailto:contato@agencianevss.com" style="font-size:14px;color:#e8d5f5;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#D4A017'" onmouseout="this.style.color='#e8d5f5'">contato@agencianevss.com</a>
                         </li>
                         <li style="display:flex;align-items:flex-start;gap:10px;">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="#E79032" style="flex-shrink:0;margin-top:2px;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
-                            <a href="#" style="font-size:14px;color:rgba(255,255,255,0.6);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">+55 (00) 00000-0000</a>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="#D4A017" style="flex-shrink:0;margin-top:2px;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+                            <a href="#" style="font-size:14px;color:#e8d5f5;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#D4A017'" onmouseout="this.style.color='#e8d5f5'">+55 (00) 00000-0000</a>
                         </li>
                         <li style="display:flex;align-items:flex-start;gap:10px;">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E79032" stroke-width="2" stroke-linecap="round" style="flex-shrink:0;margin-top:2px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                            <span style="font-size:14px;color:rgba(255,255,255,0.6);">Atendimento 100% Digital.<br>Para marcas do Brasil e do Mundo.</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4A017" stroke-width="2" stroke-linecap="round" style="flex-shrink:0;margin-top:2px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            <span style="font-size:14px;color:#e8d5f5;">Atendimento 100% Digital.<br>Para marcas do Brasil e do Mundo.</span>
                         </li>
                     </ul>
                 </div>
@@ -797,8 +759,8 @@
                 <div>
                     <h4 style="font-size:11px;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:0.08em;margin:0 0 20px;">Políticas</h4>
                     <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:12px;">
-                        <li><a href="#" style="font-size:14px;color:rgba(255,255,255,0.6);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Política de Privacidade</a></li>
-                        <li><a href="#" style="font-size:14px;color:rgba(255,255,255,0.6);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Termos de Uso</a></li>
+                        <li><a href="#" style="font-size:14px;color:#e8d5f5;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#D4A017'" onmouseout="this.style.color='#e8d5f5'">Política de Privacidade</a></li>
+                        <li><a href="#" style="font-size:14px;color:#e8d5f5;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#D4A017'" onmouseout="this.style.color='#e8d5f5'">Termos de Uso</a></li>
                     </ul>
                 </div>
 
@@ -806,33 +768,33 @@
         </div>
 
         <!-- Bottom bar -->
-        <div style="background:#0F0F0F;padding:20px 0;">
+        <div style="background:#2a1250;padding:20px 0;border-top:1px solid #6b35a8;">
             <div class="container-nevss" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
-                <p style="font-size:12px;color:rgba(255,255,255,0.4);margin:0;">
+                <p style="font-size:12px;color:#c9a8e8;margin:0;">
                     © <span id="year"></span> Agência Nevss | Estratégia e Branding. Todos os direitos reservados.
                 </p>
-                <p style="font-size:12px;color:rgba(255,255,255,0.4);margin:0;">
+                <p style="font-size:12px;color:#c9a8e8;margin:0;">
                     CNPJ: XX.XXX.XXX/XXXX-XX
                 </p>
             </div>
         </div>
     </footer>
-  `}function b(){let e=document.getElementById(`year`);e&&(e.textContent=new Date().getFullYear())}document.querySelector(`#app`).innerHTML=`
+  `}function C(){let e=document.getElementById(`year`);e&&(e.textContent=new Date().getFullYear())}document.querySelector(`#app`).innerHTML=`
 <div>
   ${t()}
   ${r()}
   <main>
     ${a()}
     ${o()}
-    ${s()}
-    ${c()}
-    ${l()}
+    ${u()}
     ${d()}
     ${f()}
     ${m()}
     ${h()}
     ${_()}
+    ${v()}
+    ${b()}
   </main>
-  ${y()}
+  ${S()}
 </div>
-`,n(),g(),b();var x=new IntersectionObserver(e=>{e.forEach(e=>{e.isIntersecting&&(e.target.classList.add(`active`),x.unobserve(e.target))})},{threshold:.12});document.querySelectorAll(`.reveal`).forEach(e=>x.observe(e));
+`,n(),y(),C();var w=new IntersectionObserver(e=>{e.forEach(e=>{e.isIntersecting&&(e.target.classList.add(`active`),w.unobserve(e.target))})},{threshold:.12});document.querySelectorAll(`.reveal`).forEach(e=>w.observe(e));
