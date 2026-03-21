@@ -13,11 +13,11 @@ export function Strategist() {
                 <!-- Foto -->
                 <div class="reveal" style="max-width:420px;">
                     <div style="position:relative;">
-                        <img src="${stratImg}" alt="Emily Nevss - Estrategista" style="width:100%;height:auto;max-height:600px;object-fit:cover;border-radius:20px;filter:grayscale(100%);transition:filter 0.5s ease;" onmouseover="this.style.filter='grayscale(0%)'" onmouseout="this.style.filter='grayscale(100%)'">
+                        <img src="${stratImg}" alt="Emily Nevss - Estrategista" style="width:100%;height:auto;object-fit:cover;border-radius:20px;filter:grayscale(100%);transition:filter 0.5s ease;image-rendering:auto;" onmouseover="this.style.filter='grayscale(0%)'" onmouseout="this.style.filter='grayscale(100%)'">
                         
                         <!-- Badge CEO -->
-                        <div style="position:absolute;bottom:-16px;right:-16px;background:#1A1A1A;border:2px solid #E8900A;border-radius:50%;width:80px;height:80px;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,0,0,0.2);">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="#E8900A"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <div style="position:absolute;bottom:-16px;right:-16px;background:#1A1A1A;border:2px solid #E79032;border-radius:50%;width:80px;height:80px;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,0,0,0.2);">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="#E79032"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
                             <span style="font-size:9px;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:0.08em;text-align:center;line-height:1.2;margin-top:2px;">CEO<br>Founder</span>
                         </div>
                     </div>
@@ -25,7 +25,7 @@ export function Strategist() {
 
                 <!-- Conteúdo -->
                 <div class="reveal">
-                    <p style="font-size:11px;font-weight:700;color:#E8900A;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:16px;">
+                    <p style="font-size:11px;font-weight:700;color:#E79032;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:16px;">
                         A Estrategista por trás do jogo
                     </p>
 
@@ -34,7 +34,7 @@ export function Strategist() {
                     </h2>
 
                     <!-- Citação -->
-                    <p style="font-family:'Playfair Display',serif;font-size:22px;font-style:italic;color:#E8900A;line-height:1.4;margin:0 0 24px;">
+                    <p style="font-family:'Playfair Display',serif;font-size:22px;font-style:italic;color:#E79032;line-height:1.4;margin:0 0 24px;">
                         Não existe concorrência para quem sabe se posicionar.
                     </p>
 
@@ -48,12 +48,12 @@ export function Strategist() {
 
                     <!-- Mini-cards -->
                     <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-bottom:32px;">
-                        <div style="background:#fff;border:0.5px solid #E8900A;border-radius:12px;padding:20px;">
-                            <h4 style="font-size:22px;font-weight:700;color:#1A1A1A;margin:0 0 8px;">Visão <span style="color:#E8900A;">360°</span></h4>
+                        <div style="background:#fff;border:0.5px solid #E79032;border-radius:12px;padding:20px;">
+                            <h4 style="font-size:22px;font-weight:700;color:#1A1A1A;margin:0 0 8px;">Visão <span style="color:#E79032;">360°</span></h4>
                             <p style="font-size:13px;color:#666;line-height:1.6;margin:0;">Estratégia, Copywriting, Design e Tráfego alinhados.</p>
                         </div>
-                        <div style="background:#fff;border:0.5px solid #E8900A;border-radius:12px;padding:20px;">
-                            <h4 style="font-size:22px;font-weight:700;color:#1A1A1A;margin:0 0 8px;">Alta <span style="color:#E8900A;">Demanda</span></h4>
+                        <div style="background:#fff;border:0.5px solid #E79032;border-radius:12px;padding:20px;">
+                            <h4 style="font-size:22px;font-weight:700;color:#1A1A1A;margin:0 0 8px;">Alta <span style="color:#E79032;">Demanda</span></h4>
                             <p style="font-size:13px;color:#666;line-height:1.6;margin:0;">Atendimento seleto para garantir foco total nos resultados.</p>
                         </div>
                     </div>

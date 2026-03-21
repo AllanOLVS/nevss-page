@@ -8,14 +8,14 @@ export function ProblemSection() {
                 <!-- COLUNA ESQUERDA: Texto (55%) -->
                 <div class="lg:col-span-7 order-2 lg:order-1 reveal">
                     <!-- Tag -->
-                    <p style="font-size:11px;font-weight:700;color:#E8900A;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:16px;">
+                    <p style="font-size:11px;font-weight:700;color:#E79032;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:16px;">
                         Por que sua marca está travada?
                     </p>
 
                     <!-- Headline -->
                     <h2 class="resp-h2" style="font-size:48px;font-weight:700;color:#1A1A1A;line-height:1.1;margin:0 0 20px;">
                         Sem tempo para cuidar das<br>
-                        <span style="font-family:'Playfair Display',serif;color:#E8900A;font-style:italic;">redes sociais?</span>
+                        <span style="font-family:'Playfair Display',serif;color:#E79032;font-style:italic;">redes sociais?</span>
                     </h2>
 
                     <!-- Parágrafo -->
@@ -53,12 +53,12 @@ export function ProblemSection() {
 
                 <!-- COLUNA DIREITA: Visual (45%) -->
                 <div class="lg:col-span-5 order-1 lg:order-2 reveal">
-                    <div style="position:relative;">
+                    <div style="position:relative;max-width:320px;margin:0 auto;">
                         <!-- Mockup: Celular com feed -->
-                        <div style="background:#fff;border-radius:20px;border:0.5px solid #E5E0D8;padding:16px;box-shadow:0 8px 32px rgba(0,0,0,0.08);max-width:320px;margin:0 auto;">
+                        <div style="background:#fff;border-radius:20px;border:0.5px solid #E5E0D8;padding:16px;box-shadow:0 8px 32px rgba(0,0,0,0.08);">
                             <!-- Phone header -->
                             <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid #F2EDE5;">
-                                <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#E8900A,#F5B041);display:flex;align-items:center;justify-content:center;">
+                                <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#E79032,#F5B041);display:flex;align-items:center;justify-content:center;">
                                     <span style="color:#fff;font-weight:800;font-size:14px;">N</span>
                                 </div>
                                 <div>
@@ -95,7 +95,7 @@ export function ProblemSection() {
                         <!-- Card flutuante: transformação -->
                         <div class="animate-float" style="position:absolute;bottom:-16px;right:-8px;background:#1A1A1A;color:#fff;border-radius:12px;padding:14px 18px;box-shadow:0 4px 20px rgba(0,0,0,0.15);z-index:3;animation-delay:1s;">
                             <p style="margin:0;font-size:11px;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px;">Depois da Nevss</p>
-                            <p style="margin:0;font-size:18px;font-weight:700;color:#E8900A;">+240% alcance</p>
+                            <p style="margin:0;font-size:18px;font-weight:700;color:#E79032;">+240% alcance</p>
                         </div>
                     </div>
                 </div>

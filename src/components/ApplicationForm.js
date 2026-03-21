@@ -5,11 +5,11 @@ export function ApplicationForm() {
         <div class="container-nevss">
             <!-- Header -->
             <div class="reveal" style="text-align:center;margin-bottom:56px;">
-                <p style="font-size:11px;font-weight:700;color:#E8900A;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:12px;">
+                <p style="font-size:11px;font-weight:700;color:#E79032;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:12px;">
                     Vagas Limitadas
                 </p>
                 <h2 class="resp-h2" style="font-size:48px;font-weight:700;color:#fff;line-height:1.1;margin:0 0 12px;">
-                    Aplicação para <span style="font-family:'Playfair Display',serif;color:#E8900A;font-style:italic;">Parceria</span>
+                    Aplicação para <span style="font-family:'Playfair Display',serif;color:#E79032;font-style:italic;">Parceria</span>
                 </h2>
                 <p style="font-size:16px;color:rgba(255,255,255,0.6);margin:0;">
                     Tome a decisão que vai mudar o rumo da sua marca.
@@ -21,41 +21,66 @@ export function ApplicationForm() {
 
                 <!-- Coluna processo -->
                 <div class="reveal">
-                    <p style="font-size:13px;font-weight:600;color:#fff;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:32px;">
-                        Dar o próximo passo leva menos de 1 minuto
+                    <p style="font-size:14px;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:32px;text-align:center;">
+                        Dar o próximo passo leva menos de <span style="font-family:'Playfair Display',serif;font-style:italic;color:#FFFFFF;font-size:16px;text-shadow:0 0 12px rgba(231, 144, 50,0.6);">um minuto</span>
                     </p>
 
-                    <div style="display:flex;flex-direction:column;gap:24px;">
+                    <div class="steps-column">
                         <!-- Step 1 -->
-                        <div style="display:flex;gap:16px;align-items:flex-start;">
-                            <div style="width:44px;height:44px;background:rgba(232,144,10,0.15);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E8900A" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                        <div class="step-card">
+                            <span class="step-number">1</span>
+                            <div class="step-card-body">
+                                <div class="step-icon step-icon--red">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E79032" stroke-width="2.2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                                </div>
+                                <div>
+                                    <h4 class="step-title">Preencha o formulário</h4>
+                                    <p class="step-desc">Envie suas informações de contato. Todos os seus dados estarão seguros, vamos cuidar bem deles.</p>
+                                </div>
                             </div>
-                            <div>
-                                <h4 style="font-size:16px;font-weight:700;color:#fff;margin:0 0 4px;">Preencha o formulário</h4>
-                                <p style="font-size:13px;color:rgba(255,255,255,0.5);margin:0;line-height:1.6;">Envie suas informações e detalhes do projeto para análise.</p>
-                            </div>
+                        </div>
+
+                        <!-- Connector 1→2 -->
+                        <div class="step-connector">
+                            <svg width="24" height="40" viewBox="0 0 24 40" fill="none">
+                                <path d="M12 0 v32" stroke="#4CAF50" stroke-width="2.5" stroke-dasharray="6 5" stroke-linecap="round"/>
+                                <polygon points="12,40 6,32 18,32" fill="#4CAF50"/>
+                            </svg>
                         </div>
 
                         <!-- Step 2 -->
-                        <div style="display:flex;gap:16px;align-items:flex-start;">
-                            <div style="width:44px;height:44px;background:rgba(232,144,10,0.15);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E8900A" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                            </div>
-                            <div>
-                                <h4 style="font-size:16px;font-weight:700;color:#fff;margin:0 0 4px;">Receba uma ligação</h4>
-                                <p style="font-size:13px;color:rgba(255,255,255,0.5);margin:0;line-height:1.6;">Em até 12h úteis, um especialista entra em contato para agendar.</p>
+                        <div class="step-card">
+                            <span class="step-number">2</span>
+                            <div class="step-card-body step-card-body--reverse">
+                                <div>
+                                    <h4 class="step-title">Receba uma ligação</h4>
+                                    <p class="step-desc">Em até 12 horas, um dos nossos especialistas fará uma ligação para agendar a reunião mais importante com você.</p>
+                                </div>
+                                <div class="step-icon step-icon--red">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E79032" stroke-width="2.2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                                </div>
                             </div>
                         </div>
 
+                        <!-- Connector 2→3 -->
+                        <div class="step-connector">
+                            <svg width="24" height="40" viewBox="0 0 24 40" fill="none">
+                                <path d="M12 0 v32" stroke="#4CAF50" stroke-width="2.5" stroke-dasharray="6 5" stroke-linecap="round"/>
+                                <polygon points="12,40 6,32 18,32" fill="#4CAF50"/>
+                            </svg>
+                        </div>
+
                         <!-- Step 3 -->
-                        <div style="display:flex;gap:16px;align-items:flex-start;">
-                            <div style="width:44px;height:44px;background:rgba(232,144,10,0.15);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E8900A" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                            </div>
-                            <div>
-                                <h4 style="font-size:16px;font-weight:700;color:#fff;margin:0 0 4px;">Reunião Estratégica</h4>
-                                <p style="font-size:13px;color:rgba(255,255,255,0.5);margin:0;line-height:1.6;">Apresentamos uma proposta personalizada para escalar sua marca.</p>
+                        <div class="step-card">
+                            <span class="step-number">3</span>
+                            <div class="step-card-body">
+                                <div class="step-icon step-icon--red">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E79032" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                                </div>
+                                <div>
+                                    <h4 class="step-title">Reunião Estratégica</h4>
+                                    <p class="step-desc">Apresentamos uma proposta personalizada para escalar sua marca de forma inteligente.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -101,7 +126,7 @@ export function ApplicationForm() {
                         </div>
 
                         <!-- Submit -->
-                        <button type="submit" style="width:100%;padding:18px;background:#E8900A;color:#fff;font-size:16px;font-weight:700;border:none;border-radius:10px;cursor:pointer;text-transform:uppercase;letter-spacing:0.04em;transition:transform 0.2s ease,box-shadow 0.2s ease;display:flex;align-items:center;justify-content:center;gap:8px;" onmouseover="this.style.transform='scale(1.02)';this.style.boxShadow='0 8px 24px rgba(232,144,10,0.35)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+                        <button type="submit" style="width:100%;padding:18px;background:#E79032;color:#fff;font-size:16px;font-weight:700;border:none;border-radius:10px;cursor:pointer;text-transform:uppercase;letter-spacing:0.04em;transition:transform 0.2s ease,box-shadow 0.2s ease;display:flex;align-items:center;justify-content:center;gap:8px;" onmouseover="this.style.transform='scale(1.02)';this.style.boxShadow='0 8px 24px rgba(231, 144, 50,0.35)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
                             ENVIAR MINHA APLICAÇÃO
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
                         </button>

@@ -48,17 +48,17 @@ export function FAQ() {
 
   return `
     <!-- SEÇÃO 09 — FAQ -->
-    <section class="section-padding" style="background:#FFFFFF;">
+    <section class="section-padding" style="background:#1A1A1A;">
         <div class="container-nevss" style="max-width:800px;">
             <!-- Header -->
             <div class="reveal" style="text-align:center;margin-bottom:48px;">
-                <h2 class="resp-h2" style="font-size:48px;font-weight:700;color:#1A1A1A;line-height:1.1;margin:0;">
-                    Dúvidas <span style="font-family:'Playfair Display',serif;color:#E8900A;font-style:italic;">Frequentes</span>
+                <h2 class="resp-h2" style="font-size:48px;font-weight:700;color:#FFFFFF;line-height:1.1;margin:0;">
+                    Dúvidas <span style="font-family:'Playfair Display',serif;color:#E79032;font-style:italic;">Frequentes</span>
                 </h2>
             </div>
 
             <!-- Accordion -->
-            <div style="display:flex;flex-direction:column;gap:12px;">
+            <div style="display:flex;flex-direction:column;gap:16px;">
                 ${items}
             </div>
         </div>
@@ -75,12 +75,12 @@ export function initFAQ() {
     const icon = item.querySelector('.faq-icon');
 
     btn.addEventListener('click', () => {
-      const isOpen = item.classList.contains('active');
+      const isOpen = item.classList.contains('faq-open');
 
       // Close all others
       faqItems.forEach(other => {
         if (other !== item) {
-          other.classList.remove('active');
+          other.classList.remove('faq-open');
           other.querySelector('.faq-content').classList.remove('open');
           other.querySelector('.faq-icon').textContent = '+';
           other.querySelector('.faq-btn').setAttribute('aria-expanded', 'false');
@@ -89,12 +89,12 @@ export function initFAQ() {
 
       // Toggle current
       if (isOpen) {
-        item.classList.remove('active');
+        item.classList.remove('faq-open');
         content.classList.remove('open');
         icon.textContent = '+';
         btn.setAttribute('aria-expanded', 'false');
       } else {
-        item.classList.add('active');
+        item.classList.add('faq-open');
         content.classList.add('open');
         icon.textContent = '×';
         btn.setAttribute('aria-expanded', 'true');
