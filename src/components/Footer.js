@@ -1,7 +1,7 @@
 import logoImg from '../assets/logo-nevss-sFundo1.png';
 
 export function Footer() {
-  return `
+    return `
     <!-- FOOTER -->
     <footer style="background:#3d1e6e;padding-top:80px;padding-bottom:0;border-top:1px solid #6b35a8;">
         <div class="container-nevss">
@@ -87,6 +87,6 @@ export function Footer() {
 }
 
 export function initFooter() {
-  const yearEl = document.getElementById('year');
-  if (yearEl) yearEl.textContent = new Date().getFullYear();
+    const yearEl = document.getElementById('year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
 }

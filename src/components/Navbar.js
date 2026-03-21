@@ -78,6 +78,7 @@ export function initNavbar() {
 
   // Mobile drawer
   const openDrawer = () => {
+    drawer.style.top = header.classList.contains('scrolled') ? '70px' : '90px';
     drawer.classList.add('open');
     overlay.classList.add('open');
     document.body.style.overflow = 'hidden';
@@ -89,7 +90,15 @@ export function initNavbar() {
     document.body.style.overflow = '';
   };
 
-  btnMenu.addEventListener('click', openDrawer);
+  const toggleDrawer = () => {
+    if (drawer.classList.contains('open')) {
+      closeDrawer();
+    } else {
+      openDrawer();
+    }
+  };
+
+  btnMenu.addEventListener('click', toggleDrawer);
   overlay.addEventListener('click', closeDrawer);
   drawerLinks.forEach(link => link.addEventListener('click', closeDrawer));
 }
