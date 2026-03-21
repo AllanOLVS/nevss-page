@@ -48,11 +48,11 @@ export function FAQ() {
 
   return `
     <!-- SEÇÃO 09 — FAQ -->
-    <section class="section-padding" style="background:#1A1A1A;">
+    <section class="section-padding" style="background:#FFFFFF;">
         <div class="container-nevss" style="max-width:800px;">
             <!-- Header -->
             <div class="reveal" style="text-align:center;margin-bottom:48px;">
-                <h2 class="resp-h2" style="font-size:48px;font-weight:700;color:#FFFFFF;line-height:1.1;margin:0;">
+                <h2 class="resp-h2" style="font-size:48px;font-weight:700;color:#1A1A1A;line-height:1.1;margin:0;">
                     Dúvidas <span style="font-family:'Playfair Display',serif;color:#E79032;font-style:italic;">Frequentes</span>
                 </h2>
             </div>

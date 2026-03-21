@@ -402,21 +402,21 @@ body {
    FAQ ACCORDION
 ═══════════════════════════════════════ */
 .faq-item {
-    border: 1px solid rgba(231, 144, 50, 0.4);
+    border: 1px solid #E5E0D8;
     border-radius: 12px;
     overflow: hidden;
-    background: rgba(231, 144, 50, 0.04);
+    background: #FFFFFF;
     transition: border-color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .faq-item:hover {
-    border-color: rgba(231, 144, 50, 0.6);
+    border-color: #E79032;
 }
 
 .faq-item.faq-open {
     border-color: #E79032;
-    background-color: rgba(231, 144, 50, 0.08);
-    box-shadow: 0 0 20px rgba(231, 144, 50, 0.15), inset 0 0 20px rgba(231, 144, 50, 0.03);
+    background-color: rgba(231, 144, 50, 0.04);
+    box-shadow: 0 4px 16px rgba(231, 144, 50, 0.1);
 }
 
 .faq-btn {
@@ -435,13 +435,13 @@ body {
 .faq-btn span {
     font-size: 15px;
     font-weight: 600;
-    color: #FFFFFF;
+    color: #1A1A1A;
 }
 
 .faq-icon {
     font-size: 20px;
     font-weight: 300;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(26, 26, 26, 0.5);
     transition: transform 0.3s ease, color 0.3s ease;
     flex-shrink: 0;
     width: 24px;
@@ -468,7 +468,7 @@ body {
 
 .faq-content p {
     font-size: 14px;
-    color: rgba(255, 255, 255, 0.6);
+    color: #555555;
     line-height: 1.7;
 }
 
