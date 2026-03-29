@@ -1,5 +1,5 @@
 export function ApplicationForm() {
-  return `
+    return `
     <!-- SEÇÃO 10 — CTA FINAL / FORMULÁRIO -->
     <section id="aplicacao" class="section-padding" style="background:#512888;">
         <div class="container-nevss">
@@ -105,6 +105,12 @@ export function ApplicationForm() {
                         <div>
                             <label class="form-label">WhatsApp para Contato *</label>
                             <input type="tel" required class="form-field" placeholder="(00) 00000-0000">
+                        </div>
+
+                        <!-- Email -->
+                        <div>
+                            <label class="form-label">Email *</label>
+                            <input type="email" required class="form-field" placeholder="seu@email.com">
                         </div>
 
                         <!-- Faturamento -->

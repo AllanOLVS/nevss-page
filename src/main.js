@@ -6,7 +6,7 @@ import { Marquee } from './components/Marquee.js';
 import { ProblemSection } from './components/ProblemSection.js';
 import { Services } from './components/Services.js';
 import { Methodology } from './components/Methodology.js';
-import { Cases } from './components/Cases.js';
+import { Cases, initCases } from './components/Cases.js';
 import { Testimonials } from './components/Testimonials.js';
 import { Strategist } from './components/Strategist.js';
 import { FAQ, initFAQ } from './components/FAQ.js';
@@ -37,6 +37,7 @@ document.querySelector('#app').innerHTML = `
 initNavbar();
 initFAQ();
 initFooter();
+initCases();
 
 // ─── Scroll Reveal with IntersectionObserver ───
 const revealObserver = new IntersectionObserver(

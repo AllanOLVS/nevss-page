@@ -10,7 +10,7 @@ export function Footer() {
                 <!-- Coluna 1: Marca -->
                 <div>
                     <a href="#" style="display:inline-block;margin-bottom:20px;">
-                        <img src="${logoImg}" alt="Agência Nevss" style="height:36px;width:auto;filter:brightness(1.1);">
+                        <img src="${logoImg}" alt="Logotipo da Agência NEVSS no rodapé" loading="lazy" decoding="async" style="height:36px;width:auto;filter:brightness(1.1);">
                     </a>
                     <p style="font-size:13px;color:#e8d5f5;line-height:1.7;margin:0 0 20px;">
                         A agência de marketing e branding focada em criar marcas inesquecíveis e posicionamento premium de alto valor.

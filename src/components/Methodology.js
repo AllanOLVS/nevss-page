@@ -1,26 +1,26 @@
 export function Methodology() {
-  const steps = [
-    {
-      num: '1',
-      title: 'Diagnóstico Raio-X',
-      desc: 'Analisamos suas métricas atuais, posicionamento, concorrentes e identificamos os gargalos exatos que estão travando seu crescimento.',
-      deliverable: 'Relatório de diagnóstico completo',
-    },
-    {
-      num: '2',
-      title: 'Plano de Ataque',
-      desc: 'Desenhamos a estratégia de marca, definimos a identidade visual e criamos o funil de tráfego que guiará desconhecidos a se tornarem fãs.',
-      deliverable: 'Plano estratégico personalizado',
-    },
-    {
-      num: '3',
-      title: 'Execução Cinematográfica',
-      desc: 'Produção de conteúdo de altíssima qualidade, gestão de anúncios agressiva e otimização constante de resultados para escalar.',
-      deliverable: 'Conteúdo + campanhas ativas',
-    },
-  ];
+    const steps = [
+        {
+            num: '1',
+            title: 'Diagnóstico Raio-X',
+            desc: 'Analisamos suas métricas atuais, posicionamento, concorrentes e identificamos os gargalos exatos que estão travando seu crescimento.',
+            deliverable: 'Relatório de diagnóstico completo',
+        },
+        {
+            num: '2',
+            title: 'Plano de Ataque',
+            desc: 'Desenhamos a estratégia de marca, definimos a identidade visual e criamos o funil de tráfego que guiará desconhecidos a se tornarem fãs.',
+            deliverable: 'Plano estratégico personalizado',
+        },
+        {
+            num: '3',
+            title: 'Execução & Aceleração',
+            desc: 'Colocamos o plano em prática com produção de conteúdo cinematográfico, gestão agressiva de anúncios e otimização contínua para escalar seus resultados semana a semana.',
+            deliverable: 'Execução completa + relatórios de performance',
+        },
+    ];
 
-  const cards = steps.map((s, i) => `
+    const cards = steps.map((s, i) => `
     <div class="reveal" style="transition-delay:${i * 150}ms;position:relative;z-index:2;">
         <div style="background:#fff;border-radius:16px;padding:32px;box-shadow:0 4px 24px rgba(0,0,0,0.06);">
             <!-- Number circle -->
@@ -41,7 +41,7 @@ export function Methodology() {
     </div>
   `).join('');
 
-  return `
+    return `
     <!-- SEÇÃO 05 — MÉTODO DE ESCALA -->
     <section id="metodologia" class="section-padding" style="background:#F2EDE5;">
         <div class="container-nevss" style="text-align:center;">

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.agencianevss.com.br/sitemap.xml

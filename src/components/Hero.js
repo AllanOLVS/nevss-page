@@ -65,7 +65,7 @@ export function Hero() {
                     <div style="position:relative;min-height:420px;">
 
                         <!-- Imagem da fundadora emergindo por trás do card -->
-                        <img src="${fotoHero}" alt="Estrategista Emily Nevss" class="hero-founder-img" style="position:absolute;bottom:90%;left:50%;transform:translateX(-40%);height:420px;width:auto;z-index:1;pointer-events:none;">
+                        <img src="${fotoHero}" alt="Emily Neves, CEO e fundadora da Agência NEVSS, especialista em marketing estratégico" loading="eager" fetchpriority="high" decoding="async" class="hero-founder-img" style="position:absolute;bottom:90%;left:50%;transform:translateX(-40%);height:420px;width:auto;z-index:1;pointer-events:none;">
 
                         <!-- Card principal: Dashboard mockup -->
                         <div style="background:#fff;border-radius:16px;border:0.5px solid #E5E0D8;padding:20px;box-shadow:0 8px 40px rgba(0,0,0,0.08);position:relative;z-index:2;margin-top:180px;">

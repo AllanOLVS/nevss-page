@@ -1,7 +1,7 @@
 import stratImg from '../assets/estrat-por-tras-do-jogo.jpg';
 
 export function Strategist() {
-  return `
+    return `
     <!-- SEÇÃO 08 — A ESTRATEGISTA -->
     <section id="estrategista" class="section-padding" style="background:#FAF8F4;position:relative;overflow:hidden;">
         <!-- Diagonal sutil -->
@@ -13,7 +13,7 @@ export function Strategist() {
                 <!-- Foto -->
                 <div class="reveal" style="max-width:420px;">
                     <div style="position:relative;">
-                        <img src="${stratImg}" alt="Emily Nevss - Estrategista" style="width:100%;height:auto;object-fit:cover;border-radius:20px;filter:grayscale(100%);transition:filter 0.5s ease;image-rendering:auto;" onmouseover="this.style.filter='grayscale(0%)'" onmouseout="this.style.filter='grayscale(100%)'">
+                        <img src="${stratImg}" alt="Emily Neves em retrato profissional na seção A Estrategista da Agência NEVSS" loading="lazy" decoding="async" style="width:100%;height:auto;object-fit:cover;border-radius:20px;filter:grayscale(100%);transition:filter 0.5s ease;image-rendering:auto;" onmouseover="this.style.filter='grayscale(0%)'" onmouseout="this.style.filter='grayscale(100%)'">
                         
                         <!-- Badge CEO -->
                         <div style="position:absolute;bottom:-16px;right:-16px;background:#1A1A1A;border:2px solid #E79032;border-radius:50%;width:80px;height:80px;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,0,0,0.2);">
@@ -30,7 +30,7 @@ export function Strategist() {
                     </p>
 
                     <h2 class="resp-h2" style="font-size:48px;font-weight:800;color:#1A1A1A;margin:0 0 20px;text-transform:uppercase;">
-                        EMILY NEVSS
+                        EMILY NEVES
                     </h2>
 
                     <!-- Citação -->
@@ -55,6 +55,24 @@ export function Strategist() {
                         <div style="background:#fff;border:0.5px solid #E79032;border-radius:12px;padding:20px;">
                             <h4 style="font-size:22px;font-weight:700;color:#1A1A1A;margin:0 0 8px;">Alta <span style="color:#E79032;">Demanda</span></h4>
                             <p style="font-size:13px;color:#666;line-height:1.6;margin:0;">Atendimento seleto para garantir foco total nos resultados.</p>
+                        </div>
+                    </div>
+
+                    <!-- Especialidades -->
+                    <div style="background:#fff;border:0.5px solid #E5E0D8;border-radius:16px;padding:24px;box-shadow:0 6px 20px rgba(0,0,0,0.06);margin-bottom:32px;">
+                        <h4 style="font-size:18px;font-weight:700;color:#1A1A1A;margin:0 0 16px;">Especialidades</h4>
+                        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:16px;">
+                            <span style="display:inline-flex;align-items:center;padding:8px 14px;border-radius:999px;background:rgba(232, 160, 32, 0.16);color:#B06B00;font-size:12px;font-weight:700;">Marketing de Conteúdo</span>
+                            <span style="display:inline-flex;align-items:center;padding:8px 14px;border-radius:999px;background:rgba(232, 160, 32, 0.16);color:#B06B00;font-size:12px;font-weight:700;">Marketing de Moda &amp; Lifestyle</span>
+                            <span style="display:inline-flex;align-items:center;padding:8px 14px;border-radius:999px;background:rgba(232, 160, 32, 0.16);color:#B06B00;font-size:12px;font-weight:700;">Copywriting Estratégico</span>
+                            <span style="display:inline-flex;align-items:center;padding:8px 14px;border-radius:999px;background:rgba(232, 160, 32, 0.16);color:#B06B00;font-size:12px;font-weight:700;">Identidade de Marca</span>
+                            <span style="display:inline-flex;align-items:center;padding:8px 14px;border-radius:999px;background:rgba(232, 160, 32, 0.16);color:#B06B00;font-size:12px;font-weight:700;">Tráfego Pago (Meta &amp; Google)</span>
+                            <span style="display:inline-flex;align-items:center;padding:8px 14px;border-radius:999px;background:rgba(232, 160, 32, 0.16);color:#B06B00;font-size:12px;font-weight:700;">Funil de Vendas</span>
+                        </div>
+                        <div style="display:flex;flex-wrap:wrap;gap:16px;">
+                            <span style="font-size:13px;font-weight:600;color:#555;">🏆 +20 marcas transformadas</span>
+                            <span style="font-size:13px;font-weight:600;color:#555;">📈 +3 anos de mercado</span>
+                            <span style="font-size:13px;font-weight:600;color:#555;">🎯 Especialista em posicionamento de alto valor</span>
                         </div>
                     </div>
 

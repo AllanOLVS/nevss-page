@@ -52,9 +52,9 @@ export function Services() {
             <div class="reveal" style="display:flex;flex-direction:column;gap:8px;margin-bottom:48px;">
                 <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px;">
                     <div>
-                        <p style="font-size:11px;font-weight:700;color:#E79032;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:12px;">Nossas Soluções</p>
+                      <p style="font-size:11px;font-weight:700;color:#E79032;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:12px;">Nossas Armas Estratégicas</p>
                         <h2 class="resp-h2" style="font-size:48px;font-weight:700;color:#1A1A1A;line-height:1.1;margin:0;">
-                            O Ecossistema <span style="font-family:'Playfair Display',serif;color:#E79032;font-style:italic;">NEVSS</span>
+                        O Arsenal <span style="font-family:'Playfair Display',serif;color:#E79032;font-style:italic;">NEVSS</span>
                         </h2>
                     </div>
                     <p style="font-size:16px;color:#666;line-height:1.6;max-width:420px;margin:0;text-align:right;">

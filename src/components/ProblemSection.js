@@ -54,14 +54,14 @@ export function ProblemSection() {
                     <div class="photo-stack">
                         <div class="photo-stack__item photo-stack__item--1">
                             <span class="collage-tag">BASTIDORES REAIS ✦</span>
-                            <img src="${img1Src}" alt="Mulher sendo filmada por duas câmeras em estúdio" />
+                            <img src="${img1Src}" alt="Mulher sendo filmada por duas câmeras em estúdio" loading="lazy" decoding="async" />
                         </div>
                         <div class="photo-stack__item photo-stack__item--2">
                             <span class="collage-badge">produção profissional</span>
-                            <img src="${img2Src}" alt="Câmera em close filmando mulher ao fundo" />
+                            <img src="${img2Src}" alt="Câmera em close filmando mulher ao fundo" loading="lazy" decoding="async" />
                         </div>
                         <div class="photo-stack__item photo-stack__item--3">
-                            <img src="${img3Src}" alt="Vista geral do set com câmeras, luzes e mulher ao centro" />
+                            <img src="${img3Src}" alt="Vista geral do set com câmeras, luzes e mulher ao centro" loading="lazy" decoding="async" />
                         </div>
                     </div>
                 </div>
