@@ -39,7 +39,7 @@ export function Marquee() {
                 <span class="partners-kicker-line"></span>
             </div>
             <p class="partners-title">
-              Marcas que confiam na
+              Empresas que confiam na
               <img class="partners-title-brand" src="${faviconSquare}" alt="Nevss" loading="lazy" decoding="async" />
             </p>
         </div>
