@@ -312,7 +312,7 @@ body {
 /* ═══════════════════════════════════════
    MARQUEE
 ═══════════════════════════════════════ */
-@keyframes marquee {
+@keyframes logoMarqueeScroll {
     0% {
         transform: translateX(0);
     }
@@ -324,13 +324,200 @@ body {
 
 .marquee-track {
     display: flex;
-    gap: 48px;
-    animation: marquee 30s linear infinite;
+    gap: 0;
+    animation: none;
     white-space: nowrap;
 }
 
-.marquee-track:hover {
+.partners-band {
+    background: linear-gradient(160deg, #1a1040 0%, #0e0b1f 60%);
+    padding: 52px 0 48px;
+    overflow: hidden;
+    position: relative;
+}
+
+.partners-band::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08), transparent);
+}
+
+.partners-head {
+    margin-bottom: 20px;
+}
+
+.partners-kicker-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 2px;
+}
+
+.partners-kicker-line {
+    width: 48px;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.partners-kicker {
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #e49633;
+}
+
+.partners-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+    font-size: clamp(22px, 3vw, 32px);
+    line-height: 1;
+    color: rgba(255, 255, 255, 0.88);
+    margin: 0;
+    font-weight: 300;
+    letter-spacing: -0.01em;
+    flex-wrap: wrap;
+}
+
+.partners-title-brand {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    transform: translateY(-5px);
+    display: block;
+    flex-shrink: 0;
+}
+
+.logo-marquee-scroller {
+    display: flex;
+    width: max-content;
+    animation: logoMarqueeScroll 36s linear infinite;
+    will-change: transform;
+}
+
+.logo-marquee-wrapper:hover .logo-marquee-scroller {
     animation-play-state: paused;
+}
+
+.logo-marquee-wrapper {
+    overflow: hidden;
+    position: relative;
+}
+
+.logo-marquee-wrapper::before,
+.logo-marquee-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 140px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.logo-marquee-wrapper::before {
+    left: 0;
+    background: linear-gradient(90deg, #0e0b1f 0%, transparent 100%);
+}
+
+.logo-marquee-wrapper::after {
+    right: 0;
+    background: linear-gradient(270deg, #0e0b1f 0%, transparent 100%);
+}
+
+.logo-marquee-track {
+    gap: 0;
+    flex: 0 0 auto;
+    padding-inline: 0;
+}
+
+.partner-logo-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 38px;
+    height: 82px;
+    flex: 0 0 auto;
+}
+
+.partner-logo {
+    width: auto;
+    height: 74px;
+    max-width: 320px;
+    object-fit: contain;
+    object-position: center;
+    filter: brightness(0) invert(1);
+    opacity: 0.78;
+    transition: opacity 0.4s ease;
+}
+
+.partner-logo-item:hover .partner-logo {
+    opacity: 1;
+    filter: none;
+}
+
+.partner-logo-item:hover .partner-logo.no-color-hover {
+    filter: brightness(0) invert(1);
+}
+
+.logo-sep {
+    width: 1px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    flex-shrink: 0;
+    align-self: center;
+}
+
+@media (max-width: 768px) {
+    .partners-band {
+        padding: 40px 0 36px;
+    }
+
+    .partners-kicker-line {
+        width: 40px;
+    }
+
+    .partners-title {
+        font-size: 22px;
+        padding-inline: 16px;
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+
+    .partners-title-brand {
+        width: 35px;
+        height: 35px;
+        flex-basis: 100%;
+        order: 1;
+        margin-top: 8px;
+    }
+
+    .logo-marquee-wrapper::before,
+    .logo-marquee-wrapper::after {
+        width: 84px;
+    }
+
+    .partner-logo-item {
+        padding: 0 26px;
+        height: 72px;
+    }
+
+    .partner-logo {
+        height: 58px;
+        max-width: 260px;
+    }
+
+    .logo-sep {
+        height: 16px;
+    }
 }
 
 /* ═══════════════════════════════════════
