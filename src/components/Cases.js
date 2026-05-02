@@ -215,7 +215,7 @@ export function Cases() {
 
             <div class="cases-grid">
                 ${casesData.map((c, i) => `
-                <article class="case-card reveal js-open-modal" data-id="${c.id}" role="button" tabindex="0" aria-label="Ver case de ${c.logoEmpresa}" style="transition-delay: ${(i % 2) * 150}ms">
+                <article class="case-card reveal js-open-modal ${i >= 4 ? 'hidden-case' : ''}" data-id="${c.id}" role="button" tabindex="0" aria-label="Ver case de ${c.logoEmpresa}" style="transition-delay: ${(i % 2) * 150}ms">
                     <div class="case-image-area">
                         <span class="case-badge">${c.segmento}</span>
                         <img class="case-company-image" src="${c.img}" alt="Logo ${c.logoEmpresa}" loading="lazy" />
@@ -235,9 +235,9 @@ export function Cases() {
                 `).join('')}
             </div>
 
-            <footer class="cases-footer-section reveal">
+            <footer class="cases-footer-section reveal" id="cases-footer-section">
                 <p>Mais de 20 marcas transformadas em líderes de segmento</p>
-                <a href="#" class="cases-footer-link">Ver todos os resultados &rarr;</a>
+                <a href="#" class="cases-footer-link" id="load-more-cases">Ver todos os resultados &rarr;</a>
             </footer>
         </div>
 
@@ -344,6 +344,46 @@ export function initCases() {
     document.addEventListener('click', handleCasesClick);
 
     function handleCasesClick(e) {
+        // Load more / less cases
+        if (e.target.closest('#load-more-cases')) {
+            e.preventDefault();
+            const btn = e.target.closest('#load-more-cases');
+            const isExpanded = btn.classList.contains('is-expanded');
+            
+            if (!isExpanded) {
+                // Expand
+                const hiddenCases = document.querySelectorAll('.hidden-case');
+                hiddenCases.forEach(card => card.classList.remove('hidden-case'));
+                btn.innerHTML = '&larr; Ver menos resultados';
+                btn.classList.add('is-expanded');
+                
+                // Trigger IntersectionObserver to reveal newly shown cards
+                setTimeout(() => {
+                    document.querySelectorAll('.case-card:not(.active)').forEach(el => {
+                        if (window.revealObserver) window.revealObserver.observe(el);
+                    });
+                }, 100);
+            } else {
+                // Collapse
+                const allCases = document.querySelectorAll('.case-card');
+                allCases.forEach((card, index) => {
+                    if (index >= 4) {
+                        card.classList.add('hidden-case');
+                        card.classList.remove('active'); // reset animation
+                    }
+                });
+                btn.innerHTML = 'Ver todos os resultados &rarr;';
+                btn.classList.remove('is-expanded');
+                
+                // Scroll back to cases section smoothly
+                const section = document.getElementById('cases-section-container');
+                if (section) {
+                    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }
+            return;
+        }
+
         // Fechar pelo botão X
         if (e.target.closest('#modal-close')) {
             closeModal();
