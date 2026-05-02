@@ -21,8 +21,8 @@ export function Methodology() {
     ];
 
     const cards = steps.map((s, i) => `
-    <div class="reveal" style="transition-delay:${i * 150}ms;position:relative;z-index:2;">
-        <div style="background:#fff;border-radius:16px;padding:32px;box-shadow:0 4px 24px rgba(0,0,0,0.06);">
+    <div class="reveal" style="transition-delay:${i * 150}ms;position:relative;z-index:2;display:flex;">
+        <div style="background:#fff;border-radius:16px;padding:32px;box-shadow:0 4px 24px rgba(0,0,0,0.06);flex:1;display:flex;flex-direction:column;">
             <!-- Number circle -->
             <div style="width:48px;height:48px;border:2px solid #E79032;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">
                 <span style="font-size:20px;font-weight:700;color:#E79032;">${s.num}</span>
@@ -30,7 +30,7 @@ export function Methodology() {
             <!-- Title -->
             <h3 style="font-size:18px;font-weight:700;color:#1A1A1A;text-align:center;margin:0 0 12px;">${s.title}</h3>
             <!-- Description -->
-            <p style="font-size:14px;color:#666;line-height:1.7;text-align:center;margin:0 0 20px;">${s.desc}</p>
+            <p style="font-size:14px;color:#666;line-height:1.7;text-align:center;margin:0 0 20px;flex:1;">${s.desc}</p>
             <!-- Deliverable -->
             <div style="background:rgba(231, 144, 50,0.08);padding:12px;border-radius:8px;">
                 <p style="font-size:13px;font-weight:600;color:#C47A08;margin:0;text-align:center;">

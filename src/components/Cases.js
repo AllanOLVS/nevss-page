@@ -353,16 +353,13 @@ export function initCases() {
             if (!isExpanded) {
                 // Expand
                 const hiddenCases = document.querySelectorAll('.hidden-case');
-                hiddenCases.forEach(card => card.classList.remove('hidden-case'));
+                hiddenCases.forEach(card => {
+                    card.classList.remove('hidden-case');
+                    // Add active class slightly after to allow display:block to apply and transition to work
+                    setTimeout(() => card.classList.add('active'), 10);
+                });
                 btn.innerHTML = '&larr; Ver menos resultados';
                 btn.classList.add('is-expanded');
-                
-                // Trigger IntersectionObserver to reveal newly shown cards
-                setTimeout(() => {
-                    document.querySelectorAll('.case-card:not(.active)').forEach(el => {
-                        if (window.revealObserver) window.revealObserver.observe(el);
-                    });
-                }, 100);
             } else {
                 // Collapse
                 const allCases = document.querySelectorAll('.case-card');
