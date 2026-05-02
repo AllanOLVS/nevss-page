@@ -179,6 +179,28 @@ const casesData = [
             { valor: "Ativo", descricao: "presença digital constante" }
         ],
         conclusao: "O melhor conteúdo não é o mais produzido — é o que é postado. Menos perfeição, mais constância. Menos produção, mais presença."
+    },
+    {
+        id: "maisvida",
+        segmento: "VAREJO / MODA",
+        titulo: "Produção Ágil de Conteúdo",
+        metrica: "Conteúdo constante no ritmo da loja",
+        logoEmpresa: "MAIS VIDA",
+        img: '/src/assets/nevss-x-empresas/nevss-maisVida.png',
+        subtitulo: "Conteúdo estratégico com velocidade de execução",
+        desafio: "O perfil precisava produzir conteúdo com frequência, mostrar produtos de forma prática, manter presença ativa no Instagram e gerar alcance sem depender de grandes produções.",
+        solucao: [
+            "Captação de conteúdo prática — gravações no dia a dia da loja",
+            "Estratégia de vídeos para rotina mostrando peças reais e aproveitando tendências",
+            "Edição rápida e dinâmica com cortes objetivos e foco em retenção",
+            "Entrega ágil permitindo constância nas postagens"
+        ],
+        resultados_numeros: [
+            { valor: "↑", descricao: "frequência de conteúdo no perfil" },
+            { valor: "Ágil", descricao: "entrega e edição em curto prazo" },
+            { valor: "Ativo", descricao: "presença digital constante" }
+        ],
+        conclusao: "O melhor conteúdo não é o mais produzido — é o que é postado. Menos perfeição, mais constância. Menos produção, mais presença."
     }
 ];
 
