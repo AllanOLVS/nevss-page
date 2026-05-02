@@ -1,525 +1,367 @@
-import nevssAtrevidas from '../assets/nevss-x-empresas/nevss-atrevidas.png';
-import nevssDue from '../assets/nevss-x-empresas/nevss-due.png';
-import nevssEcapCont from '../assets/nevss-x-empresas/nevss-ecapCont.png';
-import nevssLune from '../assets/nevss-x-empresas/nevss-lune.png';
-import nevssMaisVida from '../assets/nevss-x-empresas/nevss-maisVida.png';
-import nevssMariaBonita from '../assets/nevss-x-empresas/nevss-mariaBonita.png';
-import nevssMeridian from '../assets/nevss-x-empresas/nevss-meridian.png';
+import '../styles/cases.css';
 
-const iconBase = 'width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4880B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;flex-shrink:0;"';
-
-const icons = {
-    alert: `<svg ${iconBase}><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>`,
-    check: `<svg ${iconBase}><circle cx="12" cy="12" r="9"/><path d="m8.5 12 2.5 2.5L15.5 10"/></svg>`,
-    trend: `<svg ${iconBase}><polyline points="22 7 13 16 9 12 2 19"/><polyline points="16 7 22 7 22 13"/></svg>`,
-    quote: `<svg ${iconBase}><path d="M7 17h4l1-5H8V7h5v5l-1 5H7z"/><path d="M15 17h4l1-5h-4V7h5v5l-1 5h-5z"/></svg>`,
-};
-
-const caseTemplates = [
+const casesData = [
     {
-        subtitle: 'De invisivel a referencia no segmento',
-        gradient: 'linear-gradient(135deg, #3d1e6e 0%, #3d1e6e 100%)',
-        heroMetrics: [
-            { value: '+240%', label: 'Alcance Organico' },
-            { value: '3x', label: 'Faturamento' },
-            { value: '98%', label: 'Satisfacao do cliente' },
+        id: "atrevida",
+        segmento: "E-COMMERCE DE MODA",
+        titulo: "Rebranding & Posicionamento Digital",
+        metrica: "Primeiras vendas realizadas no online",
+        logoEmpresa: "ATREVIDA MODAS",
+        img: '/src/assets/nevss-x-empresas/nevss-atrevidas.png',
+        // Os dados abaixo continuam para popular o modal
+        subtitulo: "Do zero digital à marca com presença e vendas",
+        desafio: "A marca não tinha presença estruturada no digital. O perfil não tinha direção estratégica, constância no feed nem nos Stories. Ausência de posicionamento, falta de constância nas postagens e conteúdos sem estratégia definida.",
+        solucao: [
+            "Acompanhamento estratégico do perfil com estruturação completa do posicionamento",
+            "Planejamento de conteúdo com linha editorial alinhada ao público e proposta da marca",
+            "Criação de roteiros para vídeos focados em conexão, elegância e desejo",
+            "Edição de vídeos estratégica com estética que valoriza e eleva a percepção da marca",
+            "Presença ativa nos Stories para gerar proximidade e oportunidades de venda"
         ],
-        challenge:
-            'A marca tinha identidade visual inconsistente, baixo alcance organico e um posicionamento generico que nao sustentava vendas recorrentes.',
-        solutions: [
-            'Reposicionamento de marca e identidade visual premium.',
-            'Criacao de funil de conteudo para Instagram e TikTok.',
-            'Gestao de trafego pago com segmentacao por lookalike.',
-            'Otimizacao criativa semanal com analise de performance.',
+        resultados_numeros: [
+            { valor: "Feed", descricao: "chamativo e alinhado ao posicionamento" },
+            { valor: "100%", descricao: "de constância nas postagens" },
+            { valor: "1ª venda", descricao: "realizada no digital" }
         ],
-        resultNumbers: [
-            { value: '+240%', description: 'de crescimento organico em 90 dias' },
-            { value: '3x', description: 'aumento no ticket medio' },
-            { value: '+67%', description: 'mais leads qualificados no funil' },
-        ],
-        testimonial: {
-            quote:
-                'A NEVSS transformou nossa presenca digital em autoridade real. Hoje vendemos com muito mais previsibilidade e margem.',
-            name: 'Larissa Duarte',
-            role: 'Fundadora',
-            company: 'Atelier Lumi',
-        },
+        conclusao: "Transformação de um perfil sem direção em uma marca que comunica e vende no digital. Não é preciso começar grande — é preciso começar certo."
     },
     {
-        subtitle: 'Agenda previsivel e marca valorizada',
-        gradient: 'linear-gradient(135deg, #3d1e6e 0%, #3d1e6e 100%)',
-        heroMetrics: [
-            { value: '+180%', label: 'Leads Qualificados' },
-            { value: '2.4x', label: 'Faturamento' },
-            { value: '96%', label: 'Satisfacao do cliente' },
+        id: "due",
+        segmento: "CLÍNICA DE ESTÉTICA",
+        titulo: "Captação & Posicionamento Premium",
+        metrica: "+3 mil Seguidores Qualificados",
+        logoEmpresa: "DUÊ FITNESS WEAR",
+        img: '/src/assets/nevss-x-empresas/nevss-due.png',
+        subtitulo: "Agenda previsível e marca valorizada",
+        desafio: "A marca começou do zero em setembro de 2025. O desafio era construir uma comunidade ativa, com identidade, posicionamento e desejo de marca — não apenas números de seguidores.",
+        solucao: [
+            "Estratégia de conteúdo focada em conexão e conversão",
+            "Produção de Reels com linguagem atual e viral",
+            "Humanização da marca com rostos, rotina e bastidores",
+            "Campanhas comerciais com senso de urgência",
+            "Construção de comunidade — não só audiência"
         ],
-        challenge:
-            'A clinica dependia de indicacoes pontuais, tinha comunicacao fragmentada e nao conseguia converter interesse em agenda fechada.',
-        solutions: [
-            'Refino completo da proposta de valor e tom de comunicacao.',
-            'Estrategia de conteudo com foco em autoridade medica.',
-            'Campanhas de midia paga para procedimentos de maior margem.',
-            'Automacao de contato para reduzir tempo de resposta comercial.',
+        resultados_numeros: [
+            { valor: "+3 mil", descricao: "seguidores qualificados em poucos meses" },
+            { valor: "3+", descricao: "cidades com presença ativa da marca" },
+            { valor: "2025", descricao: "marca lançando e-commerce e linha própria" }
         ],
-        resultNumbers: [
-            { value: '+180%', description: 'crescimento de leads em 60 dias' },
-            { value: '2.4x', description: 'de aumento no faturamento mensal' },
-            { value: '3 meses', description: 'de agenda fechada com antecedencia' },
-        ],
-        testimonial: {
-            quote:
-                'Saimos de posts sem direcao para um posicionamento forte. A agenda virou consequencia de uma estrategia muito bem executada.',
-            name: 'Dra. Camila Viana',
-            role: 'Diretora Clinica',
-            company: 'Vitta Estetica',
-        },
+        conclusao: "Conteúdo estratégico não é sobre postar — é sobre construir marca, desejo e faturamento. A Duê saiu do zero para referência regional em moda fitness."
     },
+    {
+        id: "ecap",
+        segmento: "PRODUTORA DE CONTEÚDO",
+        titulo: "Autoridade & Conversão Digital",
+        metrica: "+165% em leads qualificados",
+        logoEmpresa: "ECAP CONTABILIDADE",
+        img: '/src/assets/nevss-x-empresas/nevss-ecapCont.png',
+        subtitulo: "Transformando conhecimento técnico em autoridade digital",
+        desafio: "A ECAP já tinha mais de 20 anos de experiência, mas enfrentava conteúdos pouco explorados em vídeo, baixa conexão com o público, dificuldade em transformar informação técnica em conteúdo atrativo e falta de posicionamento digital como referência.",
+        solucao: [
+            "Captação de conteúdo presencial com os próprios profissionais, trazendo proximidade e humanização",
+            "Planejamento estratégico com temas relevantes para empresários",
+            "Conteúdo educativo sobre Imposto de Renda, obrigações fiscais e atualizações legislativas",
+            "Linguagem acessível com foco em retenção e alcance"
+        ],
+        resultados_numeros: [
+            { valor: "20+", descricao: "anos de autoridade agora no digital" },
+            { valor: "↑", descricao: "crescimento do perfil com público qualificado" },
+            { valor: "Top", descricao: "referência digital em contabilidade" }
+        ],
+        conclusao: "Quando o conteúdo certo encontra a estratégia certa, empresas técnicas se tornam referências no digital. A ECAP transformou seu perfil em fonte de informação relevante para empresários."
+    },
+    {
+        id: "lune",
+        segmento: "MODA FEMININA",
+        titulo: "Escala Comercial de Marca",
+        metrica: "Crescimento contínuo por 120 dias",
+        logoEmpresa: "LUNE BY INGRID",
+        img: '/src/assets/nevss-x-empresas/nevss-lune.png',
+        subtitulo: "Construindo presença digital com estratégia desde o início",
+        desafio: "Por ser uma marca nova no mercado, o desafio era construir presença digital do zero, criar conexão com o público, gerar alcance sendo marca nova e posicionar com identidade e propósito.",
+        solucao: [
+            "Planejamento estratégico de conteúdo alinhado com o universo da marca",
+            "Conteúdo voltado para comunidade e alcance — identificação, proximidade, audiência engajada",
+            "Edição de vídeos estratégica com foco em retenção e valorização das peças",
+            "Estratégia adaptada ao momento da Lune, respeitando estrutura e crescimento gradual"
+        ],
+        resultados_numeros: [
+            { valor: "0→", descricao: "presença construída do zero com consistência" },
+            { valor: "120", descricao: "dias de crescimento contínuo" },
+            { valor: "✓", descricao: "público qualificado desde o início" }
+        ],
+        conclusao: "Quem começa certo, cresce mais rápido e com mais consistência. A Lune é uma marca nova que já nasce com estratégia e direção no digital."
+    },
+    {
+        id: "meridiano",
+        segmento: "GEOTECNOLOGIA / ENGENHARIA",
+        titulo: "Autoridade Técnica & Geração de Demanda",
+        metrica: "Referência no segmento geotécnico",
+        logoEmpresa: "MERIDIANO GEOTECNOLOGIAS",
+        img: '/src/assets/nevss-x-empresas/nevss-meridian.png',
+        subtitulo: "Transformando conteúdo técnico em comunicação que gera demanda",
+        desafio: "O segmento de engenharia, topografia e regularização tem barreiras naturais: linguagem técnica de difícil entendimento, baixo conhecimento do público sobre os serviços e conteúdos pouco explorados no digital.",
+        solucao: [
+            "Planejamento estratégico com pautas baseadas em dúvidas reais do público",
+            "Tradução do técnico para o simples — temas complexos em conteúdos claros",
+            "Conteúdo educativo que desperta curiosidade: 'Você sabe a diferença entre escritura e matrícula?'",
+            "Posicionamento como autoridade com domínio técnico e linguagem acessível"
+        ],
+        resultados_numeros: [
+            { valor: "↑", descricao: "aumento no alcance de conteúdos técnicos" },
+            { valor: "Ref.", descricao: "marca como referência no segmento" },
+            { valor: "↓", descricao: "barreiras de entendimento do público" }
+        ],
+        conclusao: "Não existe conteúdo difícil — existe comunicação mal feita. Quando bem estruturado, até o tema mais técnico pode gerar interesse, engajamento e oportunidades."
+    },
+    {
+        id: "mariabonita",
+        segmento: "MODA FEMININA",
+        titulo: "Estratégia de Conteúdo & Vendas",
+        metrica: "Processo de conteúdo estruturado e funcional",
+        logoEmpresa: "MARIA BONITA",
+        img: '/src/assets/nevss-x-empresas/nevss-mariaBonita.png',
+        subtitulo: "Transformando dificuldade em conteúdo em estratégia de crescimento",
+        desafio: "A Maria Bonita já possuía estrutura e produtos, mas tinha dificuldades em produzir conteúdo com constância, criar vídeos atrativos e estratégicos, direcionar postagens para alcance e venda e organizar ideias em conteúdo.",
+        solucao: [
+            "Planejamento estratégico de vídeos alinhado com comportamento do público e tendências",
+            "Criação de roteiros para prender atenção, gerar identificação e estimular desejo de compra",
+            "Direcionamento prático para produção de conteúdo de forma simples e funcional"
+        ],
+        resultados_numeros: [
+            { valor: "✓", descricao: "processo de conteúdo organizado e estratégico" },
+            { valor: "↑", descricao: "alcance e direcionamento para vendas" },
+            { valor: "100%", descricao: "constância nas publicações" }
+        ],
+        conclusao: "Quando a produção de conteúdo vira um processo estratégico, a marca para de postar por obrigação e começa a postar com propósito."
+    },
+    {
+        id: "dress",
+        segmento: "MODA FEMININA PREMIUM",
+        titulo: "Assessoria 360° & Posicionamento Premium",
+        metrica: "Elevação do padrão visual da marca",
+        logoEmpresa: "DRESS BY TAISE BRITO",
+        img: '/src/assets/nevss-x-empresas/nevss-dress.png',
+        subtitulo: "Estratégia completa para potencializar uma marca já consolidada",
+        desafio: "A Dress by Taise Brito já possuía audiência ampla e consolidada. O desafio não era começar — era elevar o nível de comunicação, produção e posicionamento, integrando conteúdo, vendas e posicionamento premium.",
+        solucao: [
+            "Assessoria completa 360° — atuação estratégica em todas as frentes do digital",
+            "Planejamento de campanhas com foco em lançamentos e datas comerciais",
+            "Produção de vídeo profissional com alto padrão estético valorizando as peças",
+            "Edição de fotos e vídeos profissionais com tratamento visual premium",
+            "Direcionamento estratégico contínuo para consistência e evolução da comunicação"
+        ],
+        resultados_numeros: [
+            { valor: "360°", descricao: "cobertura completa de todas as frentes digitais" },
+            { valor: "↑↑", descricao: "elevação do padrão visual e percepção de valor" },
+            { valor: "Premium", descricao: "posicionamento fortalecido e coerente" }
+        ],
+        conclusao: "Quando a base já é forte, a estratégia certa leva a marca para outro nível. A Dress passou a comunicar com ainda mais autoridade e sofisticação."
+    },
+    {
+        id: "top20",
+        segmento: "VAREJO / MODA",
+        titulo: "Produção Ágil de Conteúdo",
+        metrica: "Conteúdo constante no ritmo da loja",
+        logoEmpresa: "TOP 20",
+        img: '/src/assets/nevss-x-empresas/nevss-top20.png',
+        subtitulo: "Conteúdo estratégico com velocidade de execução",
+        desafio: "O perfil precisava produzir conteúdo com frequência, mostrar produtos de forma prática, manter presença ativa no Instagram e gerar alcance sem depender de grandes produções.",
+        solucao: [
+            "Captação de conteúdo prática — gravações no dia a dia da loja",
+            "Estratégia de vídeos para rotina mostrando peças reais e aproveitando tendências",
+            "Edição rápida e dinâmica com cortes objetivos e foco em retenção",
+            "Entrega ágil permitindo constância nas postagens"
+        ],
+        resultados_numeros: [
+            { valor: "↑", descricao: "frequência de conteúdo no perfil" },
+            { valor: "Ágil", descricao: "entrega e edição em curto prazo" },
+            { valor: "Ativo", descricao: "presença digital constante" }
+        ],
+        conclusao: "O melhor conteúdo não é o mais produzido — é o que é postado. Menos perfeição, mais constância. Menos produção, mais presença."
+    }
 ];
-
-const caseVisuals = [
-    {
-        segment: 'E-COMMERCE DE MODA',
-        title: 'Rebranding & Trafego Pago',
-        metric: '+240% de alcance organico',
-        image: nevssAtrevidas,
-        company: 'Atrevidas',
-    },
-    {
-        segment: 'CLINICA DE ESTETICA',
-        title: 'Captacao & Posicionamento Premium',
-        metric: 'Agenda lotada por 3 meses',
-        image: nevssDue,
-        company: 'Due',
-    },
-    {
-        segment: 'PRODUTORA DE CONTEUDO',
-        title: 'Autoridade & Conversao Digital',
-        metric: '+165% em leads qualificados',
-        image: nevssEcapCont,
-        company: 'Ecap Cont',
-    },
-    {
-        segment: 'MODA FEMININA',
-        title: 'Escala Comercial de Marca',
-        metric: 'Crescimento continuo por 120 dias',
-        image: nevssLune,
-        company: 'Lune',
-    },
-    {
-        segment: 'SAUDE E BEM-ESTAR',
-        title: 'Posicionamento de Valor',
-        metric: '+210% no alcance estrategico',
-        image: nevssMaisVida,
-        company: 'Mais Vida',
-    },
-    {
-        segment: 'BELEZA PREMIUM',
-        title: 'Percepcao & Performance',
-        metric: 'ROI validado em 90 dias',
-        image: nevssMariaBonita,
-        company: 'Maria Bonita',
-    },
-    {
-        segment: 'SERVICOS ESPECIALIZADOS',
-        title: 'Branding para Escala',
-        metric: '+188% em oportunidades comerciais',
-        image: nevssMeridian,
-        company: 'Meridian',
-    },
-    {
-        segment: 'PARCERIA ESTRATEGICA',
-        title: 'Execucao de Marca e Trafego',
-        metric: '+4.1x em retorno de midia',
-        image: nevssAtrevidas,
-        company: 'Dress',
-    },
-];
-
-const cases = caseVisuals.map((visual, index) => {
-    const template = caseTemplates[index % caseTemplates.length];
-    return {
-        ...template,
-        ...visual,
-        id: index,
-        testimonial: {
-            ...template.testimonial,
-            company: visual.company,
-        },
-    };
-});
-
-const mainCases = cases.slice(0, 4);
-const allCases = cases;
-
-function buildHeroMetrics(metrics) {
-    return metrics
-        .map(
-            (item) => `
-      <div class="case-modal-hero-metric">
-        <p>${item.value}</p>
-        <span>${item.label}</span>
-      </div>
-    `
-        )
-        .join('');
-}
-
-function buildSolutions(items) {
-    return items
-        .map(
-            (item) => `
-      <li>
-        ${icons.check}
-        <p>${item}</p>
-      </li>
-    `
-        )
-        .join('');
-}
-
-function buildResultNumbers(items) {
-    return items
-        .map(
-            (item) => `
-      <div class="metric-card">
-        <span class="metric-value">${item.value}</span>
-        <span class="metric-label">${item.description}</span>
-      </div>
-    `
-        )
-        .join('');
-}
-
-function blockHeader(iconSvg, title) {
-    return `
-      <div class="case-block-header">
-        ${iconSvg}
-        <h4 class="case-block-title">${title}</h4>
-      </div>
-    `;
-}
-
-function getModalContent(caseData) {
-    return `
-        <div class="case-modal-cover">
-            <img src="${caseData.image}" alt="Imagem principal do case ${caseData.segment}" loading="lazy" decoding="async">
-            <div class="case-modal-cover-overlay"></div>
-
-            <div class="case-modal-header case-modal-header--overlay">
-                <span class="case-modal-category">${caseData.segment}</span>
-                <div class="case-modal-brand">NEVSS x ${caseData.testimonial.company}</div>
-                <button type="button" class="case-modal-close" data-case-close aria-label="Fechar modal">✕</button>
-            </div>
-
-            <div class="case-modal-cover-copy">
-                <h3>${caseData.title}</h3>
-                <p>${caseData.subtitle}</p>
-            </div>
-        </div>
-
-        <div class="case-modal-hero">
-            <div class="case-modal-hero-metrics">
-                ${buildHeroMetrics(caseData.heroMetrics)}
-            </div>
-    </div>
-
-    <div class="case-modal-content">
-      <section class="case-block">
-        ${blockHeader(icons.alert, 'O Desafio')}
-        <p>${caseData.challenge}</p>
-      </section>
-
-      <section class="case-block">
-        ${blockHeader(icons.check, 'A Solucao Aplicada')}
-        <ul class="case-modal-solution-list">
-          ${buildSolutions(caseData.solutions)}
-        </ul>
-      </section>
-
-      <section class="case-block">
-        ${blockHeader(icons.trend, 'Resultados em numeros')}
-        <div class="case-modal-results-grid">
-          ${buildResultNumbers(caseData.resultNumbers)}
-        </div>
-      </section>
-
-      <section class="case-block">
-        ${blockHeader(icons.quote, 'Depoimento do Cliente')}
-        <div class="testimonial-card">
-          <p class="testimonial-text">${caseData.testimonial.quote}</p>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">${caseData.testimonial.name.charAt(0)}</div>
-            <div>
-              <p class="testimonial-name">${caseData.testimonial.name}</p>
-              <p class="testimonial-role">${caseData.testimonial.role} • ${caseData.testimonial.company}</p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-
-    <div class="case-modal-footer modal-footer-cta">
-      <p>Quer resultados como esses?</p>
-      <a href="#aplicacao">Iniciar minha aplicacao →</a>
-    </div>
-  `;
-}
-
-function buildCaseCards(items, options = {}) {
-    const { reveal = true, delayStep = 200 } = options;
-
-    return items
-        .map(
-            (c, i) => `
-    <article class="case-card ${reveal ? 'reveal' : ''} js-case-card" data-case-index="${c.id}" role="button" tabindex="0" aria-label="Abrir case ${c.segment}" style="transition-delay:${delayStep * i}ms;height:400px;border:1px solid #6b35a8;">
-        <div style="position:absolute;inset:0;background:${c.gradient};"></div>
-        <div style="position:absolute;top:30px;left:30px;right:30px;bottom:110px;overflow:hidden;border-radius:12px;">
-            <img src="${c.image}" alt="Case de sucesso da NEVSS para ${c.segment}" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;opacity:0.7;transition:opacity 0.4s ease,transform 0.4s ease;">
-        </div>
-        <div class="overlay"></div>
-        <div style="position:absolute;top:20px;left:20px;z-index:2;">
-            <span style="display:inline-block;padding:6px 14px;background:#D4A017;color:#FFFFFF;font-size:11px;font-weight:700;border-radius:20px;letter-spacing:0.04em;">
-                ${c.segment}
-            </span>
-        </div>
-        <div style="position:absolute;bottom:0;left:0;right:0;padding:24px;z-index:2;">
-            <h3 style="font-size:22px;font-weight:700;color:#fff;margin:0 0 8px;">${c.title}</h3>
-            <p style="font-size:15px;font-weight:700;color:#D4A017;margin:0 0 12px;">${c.metric}</p>
-            <span style="font-size:13px;color:#e8d5f5;text-decoration:underline;text-underline-offset:3px;">Ver case completo →</span>
-        </div>
-    </article>
-  `
-        )
-        .join('');
-}
 
 export function Cases() {
-    const caseCards = buildCaseCards(mainCases);
-    const allCaseCards = buildCaseCards(allCases, { reveal: false, delayStep: 0 });
-
     return `
-    <!-- SECAO 06 - RESULTADOS / CASES -->
-    <section id="cases" class="section-padding" style="background:#512888;">
-        <div class="container-nevss cases-main-content">
-            <div class="reveal" style="text-align:center;margin-bottom:48px;">
-                <h2 class="resp-h2" style="font-size:48px;font-weight:700;color:#fff;line-height:1.1;margin:0 0 16px;">
-                    A Ideia VS <span style="font-family:'Playfair Display',serif;color:#D4A017;font-style:italic;">O Resultado</span>
-                </h2>
-                <p style="font-size:16px;color:#e8d5f5;max-width:560px;margin:0 auto;line-height:1.6;">
-                    Nao vendemos posts, vendemos percepcao de valor. Veja como transformamos negocios genericos em lideres de segmento.
-                </p>
+    <section id="cases-section-container">
+        <div class="cases-section-inner">
+            <header class="cases-header reveal">
+                <h2 class="cases-title">A Ideia VS <span>O Resultado</span></h2>
+                <p class="cases-subtitle">Não vendemos posts, vendemos percepção de valor. Veja como transformamos negócios genéricos em líderes de segmento.</p>
+            </header>
+
+            <div class="cases-grid">
+                ${casesData.map((c, i) => `
+                <article class="case-card reveal js-open-modal" data-id="${c.id}" role="button" tabindex="0" aria-label="Ver case de ${c.logoEmpresa}" style="transition-delay: ${(i % 2) * 150}ms">
+                    <div class="case-image-area">
+                        <span class="case-badge">${c.segmento}</span>
+                        <img class="case-company-image" src="${c.img}" alt="Logo ${c.logoEmpresa}" loading="lazy" />
+                    </div>
+                    <div class="case-content">
+                        <h3 class="case-title">${c.titulo}</h3>
+                        <div class="case-metric">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            ${c.metrica}
+                        </div>
+                        <div class="case-footer-area">
+                            <div class="case-divider"></div>
+                            <span class="case-card-link-text">Ver case completo &rarr;</span>
+                        </div>
+                    </div>
+                </article>
+                `).join('')}
             </div>
 
-            <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:24px;" class="cases-grid">
-                ${caseCards}
-            </div>
-
-            <div class="reveal" style="text-align:center;margin-top:48px;">
-                <p style="font-size:16px;color:#e8d5f5;margin:0 0 12px;">
-                    Mais de <strong style="color:#fff;">20 marcas</strong> transformadas em lideres de segmento
-                </p>
-                <a href="#" class="link-orange js-open-all-cases" style="color:#D4A017;">Ver todos os resultados →</a>
-            </div>
+            <footer class="cases-footer-section reveal">
+                <p>Mais de 20 marcas transformadas em líderes de segmento</p>
+                <a href="#" class="cases-footer-link">Ver todos os resultados &rarr;</a>
+            </footer>
         </div>
 
-        <div id="all-cases-mobile-page" class="all-cases-mobile-page" aria-hidden="true">
-            <div class="all-cases-header">
-                <div class="all-cases-header-copy">
-                    <p>Portfolio NEVSS</p>
-                    <h3>Portfolio Completo de Resultados e Parcerias</h3>
+        <div id="case-modal-overlay" class="case-modal-overlay" aria-hidden="true">
+            <div class="case-modal-container" role="dialog" aria-modal="true" tabindex="-1" aria-labelledby="modal-title">
+                <div class="case-modal-sticky-bar">
+                    <span class="case-modal-header-badge" id="modal-badge"></span>
+                    <button type="button" class="case-modal-close" id="modal-close" aria-label="Fechar modal">✕</button>
                 </div>
-                <button type="button" class="case-modal-close" data-all-cases-mobile-close aria-label="Fechar listagem de resultados">✕</button>
-            </div>
-            <div class="all-cases-content">
-                <div class="all-cases-grid">
-                    ${allCaseCards}
+
+                <div class="case-modal-header">
+                </div>
+                
+                <div class="case-modal-body">
+                    <div class="case-modal-title-section">
+                        <h3 class="case-modal-hero-title" id="modal-title"></h3>
+                        <p class="case-modal-hero-subtitle" id="modal-subtitle"></p>
+                    </div>
+
+                    <div class="case-modal-section">
+                        <h4 class="case-modal-section-title">⚠️ O DESAFIO</h4>
+                        <p class="case-modal-section-text" id="modal-challenge"></p>
+                    </div>
+                    
+                    <div class="case-modal-section">
+                        <h4 class="case-modal-section-title">✅ A SOLUÇÃO APLICADA</h4>
+                        <ul class="case-modal-list" id="modal-solutions"></ul>
+                    </div>
+                    
+                    <div class="case-modal-section">
+                        <h4 class="case-modal-section-title">📈 RESULTADOS EM NÚMEROS</h4>
+                        <div class="case-modal-metrics-grid" id="modal-metrics"></div>
+                    </div>
+                    
+                    <div class="case-modal-section">
+                        <h4 class="case-modal-section-title">💬 DEPOIMENTO / CONCLUSÃO</h4>
+                        <div class="case-modal-quote">
+                            <p id="modal-conclusion"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="case-modal-cta">
+                    <h4>Quer resultados como esses?</h4>
+                    <a href="#aplicacao" class="case-modal-btn">Iniciar minha aplicação →</a>
                 </div>
             </div>
         </div>
     </section>
-
-    <div id="all-cases-overlay" class="case-modal-overlay all-cases-overlay" aria-hidden="true">
-      <div class="case-modal-sheet all-cases-sheet" role="dialog" aria-modal="true" aria-label="Portfolio completo de resultados" tabindex="-1">
-        <div class="all-cases-header">
-          <div class="all-cases-header-copy">
-            <p>Portfolio NEVSS</p>
-            <h3>Portfolio Completo de Resultados e Parcerias</h3>
-          </div>
-          <button type="button" class="case-modal-close" data-all-cases-close aria-label="Fechar resultados">✕</button>
-        </div>
-        <div class="all-cases-content">
-          <div class="all-cases-grid">
-            ${allCaseCards}
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div id="case-modal-overlay" class="case-modal-overlay" aria-hidden="true">
-      <div class="case-modal-sheet" role="dialog" aria-modal="true" aria-label="Detalhes do case" tabindex="-1">
-        <div class="modal-scroll-content" id="case-modal-content"></div>
-      </div>
-    </div>
-  `;
+    `;
 }
 
 export function initCases() {
-    const casesSection = document.querySelector('#cases');
-    const overlay = document.querySelector('#case-modal-overlay');
-    const content = document.querySelector('#case-modal-content');
-    const cards = document.querySelectorAll('.js-case-card');
-    const allCasesOverlay = document.querySelector('#all-cases-overlay');
-    const allCasesMobilePage = document.querySelector('#all-cases-mobile-page');
-    const openAllCasesButton = document.querySelector('.js-open-all-cases');
-    const closeAllCasesButton = document.querySelector('[data-all-cases-close]');
-    const closeAllCasesMobileButton = document.querySelector('[data-all-cases-mobile-close]');
-    let caseOpenContext = 'main';
+    // Para Vanilla JS no Vite, HMR pode destruir os elementos do DOM.
+    // Usar event delegation no document.body garante que os cliques funcionem mesmo após o Hot Reload.
 
-    if (!overlay || !content || !casesSection) return;
-
-    const isMobileViewport = () => window.matchMedia('(max-width: 768px)').matches;
-
-    const setMobileListingState = (isOpen) => {
-        if (!allCasesMobilePage) return;
-        casesSection.classList.toggle('mobile-all-cases-active', isOpen);
-        allCasesMobilePage.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
-        if (isOpen) {
-            casesSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    function closeModal() {
+        const overlay = document.getElementById('case-modal-overlay');
+        if (overlay) {
+            overlay.classList.remove('active');
+            overlay.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
         }
-    };
+    }
 
-    const updateScrollLock = () => {
-        const detailOpen = overlay.classList.contains('open');
-        const listOpen = allCasesOverlay ? allCasesOverlay.classList.contains('open') : false;
-        document.body.style.overflow = detailOpen || listOpen ? 'hidden' : '';
-    };
+    function openModal(caseId) {
+        const overlay = document.getElementById('case-modal-overlay');
+        if (!overlay) return;
 
-    const closeModal = () => {
-        overlay.classList.remove('open');
-        overlay.setAttribute('aria-hidden', 'true');
+        const data = casesData.find(c => c.id === caseId);
+        if (!data) return;
 
-        if (caseOpenContext === 'all-cases') {
-            if (isMobileViewport()) {
-                setMobileListingState(true);
-            } else if (allCasesOverlay) {
-                allCasesOverlay.classList.add('open');
-                allCasesOverlay.setAttribute('aria-hidden', 'false');
-            }
-        }
 
-        caseOpenContext = 'main';
-        updateScrollLock();
-    };
+        // Populate Modal Data
+        document.getElementById('modal-badge').textContent = data.segmento;
+        document.getElementById('modal-title').textContent = data.titulo;
+        document.getElementById('modal-subtitle').textContent = data.subtitulo;
+        document.getElementById('modal-challenge').textContent = data.desafio;
+        document.querySelector('.case-modal-header').style.setProperty('--case-modal-cover', `url('${data.img}')`);
 
-    const openAllCases = () => {
-        if (isMobileViewport()) {
-            setMobileListingState(true);
-            return;
-        }
-        if (!allCasesOverlay) return;
-        allCasesOverlay.classList.add('open');
-        allCasesOverlay.setAttribute('aria-hidden', 'false');
-        updateScrollLock();
-    };
+        document.getElementById('modal-solutions').innerHTML = data.solucao.map(s => `<li>${s}</li>`).join('');
+        document.getElementById('modal-metrics').innerHTML = data.resultados_numeros.map(r => `
+            <div class="case-modal-metric-card">
+                <span class="case-modal-metric-value">${r.valor}</span>
+                <span class="case-modal-metric-label">${r.descricao}</span>
+            </div>
+        `).join('');
+        document.getElementById('modal-conclusion').textContent = data.conclusao;
 
-    const closeAllCases = () => {
-        if (isMobileViewport()) {
-            setMobileListingState(false);
-            return;
-        }
-        if (!allCasesOverlay) return;
-        allCasesOverlay.classList.remove('open');
-        allCasesOverlay.setAttribute('aria-hidden', 'true');
-        updateScrollLock();
-    };
-
-    const openModal = (index, context = 'main') => {
-        const caseData = cases[index];
-        if (!caseData) return;
-        caseOpenContext = context;
-
-        content.innerHTML = getModalContent(caseData);
-        overlay.classList.add('open');
+        // Show Modal
+        overlay.classList.add('active');
         overlay.setAttribute('aria-hidden', 'false');
-        updateScrollLock();
+        document.body.style.overflow = 'hidden';
 
-        const closeButton = content.querySelector('[data-case-close]');
-        if (closeButton) {
-            closeButton.addEventListener('click', closeModal);
-        }
-
-        content.scrollTop = 0;
-    };
-
-    if (cards.length) {
-        cards.forEach((card) => {
-            card.addEventListener('click', () => {
-                const index = Number(card.getAttribute('data-case-index'));
-                const inAllCasesList = Boolean(card.closest('#all-cases-overlay, #all-cases-mobile-page'));
-                openModal(index, inAllCasesList ? 'all-cases' : 'main');
-            });
-
-            card.addEventListener('keydown', (event) => {
-                if (event.key === 'Enter' || event.key === ' ') {
-                    event.preventDefault();
-                    const index = Number(card.getAttribute('data-case-index'));
-                    const inAllCasesList = Boolean(card.closest('#all-cases-overlay, #all-cases-mobile-page'));
-                    openModal(index, inAllCasesList ? 'all-cases' : 'main');
-                }
-            });
-        });
+        // Trap focus inside modal
+        setTimeout(() => {
+            const closeBtn = document.getElementById('modal-close');
+            if (closeBtn) closeBtn.focus();
+        }, 100);
     }
 
-    if (openAllCasesButton) {
-        openAllCasesButton.addEventListener('click', (event) => {
-            event.preventDefault();
-            openAllCases();
-        });
-    }
+    // Removendo listener antigo para evitar duplicação em múltiplos HMRs
+    document.removeEventListener('click', handleCasesClick);
+    document.addEventListener('click', handleCasesClick);
 
-    if (closeAllCasesButton) {
-        closeAllCasesButton.addEventListener('click', closeAllCases);
-    }
-
-    if (closeAllCasesMobileButton) {
-        closeAllCasesMobileButton.addEventListener('click', () => {
-            setMobileListingState(false);
-        });
-    }
-
-    overlay.addEventListener('click', (event) => {
-        if (event.target === overlay) {
+    function handleCasesClick(e) {
+        // Fechar pelo botão X
+        if (e.target.closest('#modal-close')) {
             closeModal();
+            return;
         }
-    });
 
-    if (allCasesOverlay) {
-        allCasesOverlay.addEventListener('click', (event) => {
-            if (event.target === allCasesOverlay) {
-                closeAllCases();
-            }
-        });
+        // Fechar pelo clique fora (overlay)
+        if (e.target.id === 'case-modal-overlay') {
+            closeModal();
+            return;
+        }
+
+        // Abrir modal ao clicar num card
+        const card = e.target.closest('.js-open-modal');
+        if (card) {
+            const id = card.getAttribute('data-id');
+            openModal(id);
+        }
     }
 
-    document.addEventListener('keydown', (event) => {
-        if (event.key === 'Escape') {
-            if (overlay.classList.contains('open')) {
-                closeModal();
-                return;
-            }
-            if (isMobileViewport()) {
-                setMobileListingState(false);
-                return;
-            }
-            if (allCasesOverlay && allCasesOverlay.classList.contains('open')) {
-                closeAllCases();
-            }
-        }
-    });
+    // Keydown events
+    document.removeEventListener('keydown', handleCasesKeydown);
+    document.addEventListener('keydown', handleCasesKeydown);
 
-    window.addEventListener('resize', () => {
-        if (!isMobileViewport() && allCasesMobilePage) {
-            setMobileListingState(false);
+    function handleCasesKeydown(e) {
+        if (e.key === 'Escape') {
+            const overlay = document.getElementById('case-modal-overlay');
+            if (overlay && overlay.classList.contains('active')) {
+                closeModal();
+            }
+            return;
         }
-    });
+
+        if (e.key === 'Enter' || e.key === ' ') {
+            const card = e.target.closest('.js-open-modal');
+            if (card && document.activeElement === card) {
+                e.preventDefault();
+                const id = card.getAttribute('data-id');
+                openModal(id);
+            }
+        }
+    }
 }
