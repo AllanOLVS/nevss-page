@@ -1,29 +1,38 @@
 import '../styles/cases.css';
 
+import imgAtrevida from '../assets/nevss-x-empresas/nevss-atrevidas.png';
+import imgDue from '../assets/nevss-x-empresas/nevss-due.png';
+import imgEcap from '../assets/nevss-x-empresas/nevss-ecapCont.png';
+import imgLune from '../assets/nevss-x-empresas/nevss-lune.png';
+import imgMeridiano from '../assets/nevss-x-empresas/nevss-meridian.png';
+import imgMariaBonita from '../assets/nevss-x-empresas/nevss-mariaBonita.png';
+import imgDress from '../assets/nevss-x-empresas/nevss-dress.png';
+import imgTop20 from '../assets/nevss-x-empresas/nevss-top20.png';
+import imgMaisVida from '../assets/nevss-x-empresas/nevss-maisVida.png';
+
 const casesData = [
     {
-        id: "atrevida",
-        segmento: "E-COMMERCE DE MODA",
-        titulo: "Rebranding & Posicionamento Digital",
-        metrica: "Primeiras vendas realizadas no online",
-        logoEmpresa: "ATREVIDA MODAS",
-        img: '/src/assets/nevss-x-empresas/nevss-atrevidas.png',
-        // Os dados abaixo continuam para popular o modal
-        subtitulo: "Do zero digital à marca com presença e vendas",
-        desafio: "A marca não tinha presença estruturada no digital. O perfil não tinha direção estratégica, constância no feed nem nos Stories. Ausência de posicionamento, falta de constância nas postagens e conteúdos sem estratégia definida.",
+        id: "dress",
+        segmento: "MODA FEMININA PREMIUM",
+        titulo: "Assessoria 360° & Posicionamento Premium",
+        metrica: "Elevação do padrão visual da marca",
+        logoEmpresa: "DRESS BY TAISE BRITO",
+        img: imgDress,
+        subtitulo: "Estratégia completa para potencializar uma marca já consolidada",
+        desafio: "A Dress by Taise Brito já possuía audiência ampla e consolidada. O desafio não era começar — era elevar o nível de comunicação, produção e posicionamento, integrando conteúdo, vendas e posicionamento premium.",
         solucao: [
-            "Acompanhamento estratégico do perfil com estruturação completa do posicionamento",
-            "Planejamento de conteúdo com linha editorial alinhada ao público e proposta da marca",
-            "Criação de roteiros para vídeos focados em conexão, elegância e desejo",
-            "Edição de vídeos estratégica com estética que valoriza e eleva a percepção da marca",
-            "Presença ativa nos Stories para gerar proximidade e oportunidades de venda"
+            "Assessoria completa 360° — atuação estratégica em todas as frentes do digital",
+            "Planejamento de campanhas com foco em lançamentos e datas comerciais",
+            "Produção de vídeo profissional com alto padrão estético valorizando as peças",
+            "Edição de fotos e vídeos profissionais com tratamento visual premium",
+            "Direcionamento estratégico contínuo para consistência e evolução da comunicação"
         ],
         resultados_numeros: [
-            { valor: "Feed", descricao: "chamativo e alinhado ao posicionamento" },
-            { valor: "100%", descricao: "de constância nas postagens" },
-            { valor: "1ª venda", descricao: "realizada no digital" }
+            { valor: "360°", descricao: "cobertura completa de todas as frentes digitais" },
+            { valor: "↑↑", descricao: "elevação do padrão visual e percepção de valor" },
+            { valor: "Premium", descricao: "posicionamento fortalecido e coerente" }
         ],
-        conclusao: "Transformação de um perfil sem direção em uma marca que comunica e vende no digital. Não é preciso começar grande — é preciso começar certo."
+        conclusao: "Quando a base já é forte, a estratégia certa leva a marca para outro nível. A Dress passou a comunicar com ainda mais autoridade e sofisticação."
     },
     {
         id: "due",
@@ -31,7 +40,7 @@ const casesData = [
         titulo: "Captação & Posicionamento Premium",
         metrica: "+3 mil Seguidores Qualificados",
         logoEmpresa: "DUÊ FITNESS WEAR",
-        img: '/src/assets/nevss-x-empresas/nevss-due.png',
+        img: imgDue,
         subtitulo: "Agenda previsível e marca valorizada",
         desafio: "A marca começou do zero em setembro de 2025. O desafio era construir uma comunidade ativa, com identidade, posicionamento e desejo de marca — não apenas números de seguidores.",
         solucao: [
@@ -54,7 +63,7 @@ const casesData = [
         titulo: "Autoridade & Conversão Digital",
         metrica: "+165% em leads qualificados",
         logoEmpresa: "ECAP CONTABILIDADE",
-        img: '/src/assets/nevss-x-empresas/nevss-ecapCont.png',
+        img: imgEcap,
         subtitulo: "Transformando conhecimento técnico em autoridade digital",
         desafio: "A ECAP já tinha mais de 20 anos de experiência, mas enfrentava conteúdos pouco explorados em vídeo, baixa conexão com o público, dificuldade em transformar informação técnica em conteúdo atrativo e falta de posicionamento digital como referência.",
         solucao: [
@@ -71,26 +80,25 @@ const casesData = [
         conclusao: "Quando o conteúdo certo encontra a estratégia certa, empresas técnicas se tornam referências no digital. A ECAP transformou seu perfil em fonte de informação relevante para empresários."
     },
     {
-        id: "lune",
+        id: "mariabonita",
         segmento: "MODA FEMININA",
-        titulo: "Escala Comercial de Marca",
-        metrica: "Crescimento contínuo por 120 dias",
-        logoEmpresa: "LUNE BY INGRID",
-        img: '/src/assets/nevss-x-empresas/nevss-lune.png',
-        subtitulo: "Construindo presença digital com estratégia desde o início",
-        desafio: "Por ser uma marca nova no mercado, o desafio era construir presença digital do zero, criar conexão com o público, gerar alcance sendo marca nova e posicionar com identidade e propósito.",
+        titulo: "Estratégia de Conteúdo & Vendas",
+        metrica: "Processo de conteúdo estruturado e funcional",
+        logoEmpresa: "MARIA BONITA",
+        img: imgMariaBonita,
+        subtitulo: "Transformando dificuldade em conteúdo em estratégia de crescimento",
+        desafio: "A Maria Bonita já possuía estrutura e produtos, mas tinha dificuldades em produzir conteúdo com constância, criar vídeos atrativos e estratégicos, direcionar postagens para alcance e venda e organizar ideias em conteúdo.",
         solucao: [
-            "Planejamento estratégico de conteúdo alinhado com o universo da marca",
-            "Conteúdo voltado para comunidade e alcance — identificação, proximidade, audiência engajada",
-            "Edição de vídeos estratégica com foco em retenção e valorização das peças",
-            "Estratégia adaptada ao momento da Lune, respeitando estrutura e crescimento gradual"
+            "Planejamento estratégico de vídeos alinhado com comportamento do público e tendências",
+            "Criação de roteiros para prender atenção, gerar identificação e estimular desejo de compra",
+            "Direcionamento prático para produção de conteúdo de forma simples e funcional"
         ],
         resultados_numeros: [
-            { valor: "0→", descricao: "presença construída do zero com consistência" },
-            { valor: "120", descricao: "dias de crescimento contínuo" },
-            { valor: "✓", descricao: "público qualificado desde o início" }
+            { valor: "✓", descricao: "processo de conteúdo organizado e estratégico" },
+            { valor: "↑", descricao: "alcance e direcionamento para vendas" },
+            { valor: "100%", descricao: "constância nas publicações" }
         ],
-        conclusao: "Quem começa certo, cresce mais rápido e com mais consistência. A Lune é uma marca nova que já nasce com estratégia e direção no digital."
+        conclusao: "Quando a produção de conteúdo vira um processo estratégico, a marca para de postar por obrigação e começa a postar com propósito."
     },
     {
         id: "meridiano",
@@ -98,7 +106,7 @@ const casesData = [
         titulo: "Autoridade Técnica & Geração de Demanda",
         metrica: "Referência no segmento geotécnico",
         logoEmpresa: "MERIDIANO GEOTECNOLOGIAS",
-        img: '/src/assets/nevss-x-empresas/nevss-meridian.png',
+        img: imgMeridiano,
         subtitulo: "Transformando conteúdo técnico em comunicação que gera demanda",
         desafio: "O segmento de engenharia, topografia e regularização tem barreiras naturais: linguagem técnica de difícil entendimento, baixo conhecimento do público sobre os serviços e conteúdos pouco explorados no digital.",
         solucao: [
@@ -115,48 +123,50 @@ const casesData = [
         conclusao: "Não existe conteúdo difícil — existe comunicação mal feita. Quando bem estruturado, até o tema mais técnico pode gerar interesse, engajamento e oportunidades."
     },
     {
-        id: "mariabonita",
+        id: "lune",
         segmento: "MODA FEMININA",
-        titulo: "Estratégia de Conteúdo & Vendas",
-        metrica: "Processo de conteúdo estruturado e funcional",
-        logoEmpresa: "MARIA BONITA",
-        img: '/src/assets/nevss-x-empresas/nevss-mariaBonita.png',
-        subtitulo: "Transformando dificuldade em conteúdo em estratégia de crescimento",
-        desafio: "A Maria Bonita já possuía estrutura e produtos, mas tinha dificuldades em produzir conteúdo com constância, criar vídeos atrativos e estratégicos, direcionar postagens para alcance e venda e organizar ideias em conteúdo.",
+        titulo: "Escala Comercial de Marca",
+        metrica: "Crescimento contínuo por 120 dias",
+        logoEmpresa: "LUNE BY INGRID",
+        img: imgLune,
+        subtitulo: "Construindo presença digital com estratégia desde o início",
+        desafio: "Por ser uma marca nova no mercado, o desafio era construir presença digital do zero, criar conexão com o público, gerar alcance sendo marca nova e posicionar com identidade e propósito.",
         solucao: [
-            "Planejamento estratégico de vídeos alinhado com comportamento do público e tendências",
-            "Criação de roteiros para prender atenção, gerar identificação e estimular desejo de compra",
-            "Direcionamento prático para produção de conteúdo de forma simples e funcional"
+            "Planejamento estratégico de conteúdo alinhado com o universo da marca",
+            "Conteúdo voltado para comunidade e alcance — identificação, proximidade, audiência engajada",
+            "Edição de vídeos estratégica com foco em retenção e valorização das peças",
+            "Estratégia adaptada ao momento da Lune, respeitando estrutura e crescimento gradual"
         ],
         resultados_numeros: [
-            { valor: "✓", descricao: "processo de conteúdo organizado e estratégico" },
-            { valor: "↑", descricao: "alcance e direcionamento para vendas" },
-            { valor: "100%", descricao: "constância nas publicações" }
+            { valor: "0→", descricao: "presença construída do zero com consistência" },
+            { valor: "120", descricao: "dias de crescimento contínuo" },
+            { valor: "✓", descricao: "público qualificado desde o início" }
         ],
-        conclusao: "Quando a produção de conteúdo vira um processo estratégico, a marca para de postar por obrigação e começa a postar com propósito."
+        conclusao: "Quem começa certo, cresce mais rápido e com mais consistência. A Lune é uma marca nova que já nasce com estratégia e direção no digital."
     },
     {
-        id: "dress",
-        segmento: "MODA FEMININA PREMIUM",
-        titulo: "Assessoria 360° & Posicionamento Premium",
-        metrica: "Elevação do padrão visual da marca",
-        logoEmpresa: "DRESS BY TAISE BRITO",
-        img: '/src/assets/nevss-x-empresas/nevss-dress.png',
-        subtitulo: "Estratégia completa para potencializar uma marca já consolidada",
-        desafio: "A Dress by Taise Brito já possuía audiência ampla e consolidada. O desafio não era começar — era elevar o nível de comunicação, produção e posicionamento, integrando conteúdo, vendas e posicionamento premium.",
+        id: "atrevida",
+        segmento: "E-COMMERCE DE MODA",
+        titulo: "Rebranding & Posicionamento Digital",
+        metrica: "Primeiras vendas realizadas no online",
+        logoEmpresa: "ATREVIDA MODAS",
+        img: imgAtrevida,
+        // Os dados abaixo continuam para popular o modal
+        subtitulo: "Do zero digital à marca com presença e vendas",
+        desafio: "A marca não tinha presença estruturada no digital. O perfil não tinha direção estratégica, constância no feed nem nos Stories. Ausência de posicionamento, falta de constância nas postagens e conteúdos sem estratégia definida.",
         solucao: [
-            "Assessoria completa 360° — atuação estratégica em todas as frentes do digital",
-            "Planejamento de campanhas com foco em lançamentos e datas comerciais",
-            "Produção de vídeo profissional com alto padrão estético valorizando as peças",
-            "Edição de fotos e vídeos profissionais com tratamento visual premium",
-            "Direcionamento estratégico contínuo para consistência e evolução da comunicação"
+            "Acompanhamento estratégico do perfil com estruturação completa do posicionamento",
+            "Planejamento de conteúdo com linha editorial alinhada ao público e proposta da marca",
+            "Criação de roteiros para vídeos focados em conexão, elegância e desejo",
+            "Edição de vídeos estratégica com estética que valoriza e eleva a percepção da marca",
+            "Presença ativa nos Stories para gerar proximidade e oportunidades de venda"
         ],
         resultados_numeros: [
-            { valor: "360°", descricao: "cobertura completa de todas as frentes digitais" },
-            { valor: "↑↑", descricao: "elevação do padrão visual e percepção de valor" },
-            { valor: "Premium", descricao: "posicionamento fortalecido e coerente" }
+            { valor: "Feed", descricao: "chamativo e alinhado ao posicionamento" },
+            { valor: "100%", descricao: "de constância nas postagens" },
+            { valor: "1ª venda", descricao: "realizada no digital" }
         ],
-        conclusao: "Quando a base já é forte, a estratégia certa leva a marca para outro nível. A Dress passou a comunicar com ainda mais autoridade e sofisticação."
+        conclusao: "Transformação de um perfil sem direção em uma marca que comunica e vende no digital. Não é preciso começar grande — é preciso começar certo."
     },
     {
         id: "top20",
@@ -164,7 +174,7 @@ const casesData = [
         titulo: "Produção Ágil de Conteúdo",
         metrica: "Conteúdo constante no ritmo da loja",
         logoEmpresa: "TOP 20",
-        img: '/src/assets/nevss-x-empresas/nevss-top20.png',
+        img: imgTop20,
         subtitulo: "Conteúdo estratégico com velocidade de execução",
         desafio: "O perfil precisava produzir conteúdo com frequência, mostrar produtos de forma prática, manter presença ativa no Instagram e gerar alcance sem depender de grandes produções.",
         solucao: [
@@ -186,7 +196,7 @@ const casesData = [
         titulo: "Produção Ágil de Conteúdo",
         metrica: "Conteúdo constante no ritmo da loja",
         logoEmpresa: "MAIS VIDA",
-        img: '/src/assets/nevss-x-empresas/nevss-maisVida.png',
+        img: imgMaisVida,
         subtitulo: "Conteúdo estratégico com velocidade de execução",
         desafio: "O perfil precisava produzir conteúdo com frequência, mostrar produtos de forma prática, manter presença ativa no Instagram e gerar alcance sem depender de grandes produções.",
         solucao: [
@@ -215,7 +225,7 @@ export function Cases() {
 
             <div class="cases-grid">
                 ${casesData.map((c, i) => `
-                <article class="case-card reveal js-open-modal ${i >= 4 ? 'hidden-case' : ''}" data-id="${c.id}" role="button" tabindex="0" aria-label="Ver case de ${c.logoEmpresa}" style="transition-delay: ${(i % 2) * 150}ms">
+                <article class="case-card reveal ${c.id !== 'maisvida' ? 'js-open-modal' : ''} ${i >= 4 ? 'hidden-case' : ''}" data-id="${c.id}" ${c.id !== 'maisvida' ? 'role="button" tabindex="0"' : ''} aria-label="Ver case de ${c.logoEmpresa}" style="transition-delay: ${(i % 2) * 150}ms; ${c.id === 'maisvida' ? 'cursor: default;' : ''}">
                     <div class="case-image-area">
                         <span class="case-badge">${c.segmento}</span>
                         <img class="case-company-image" src="${c.img}" alt="Logo ${c.logoEmpresa}" loading="lazy" />
@@ -226,10 +236,12 @@ export function Cases() {
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                             ${c.metrica}
                         </div>
+                        ${c.id !== 'maisvida' ? `
                         <div class="case-footer-area">
                             <div class="case-divider"></div>
                             <span class="case-card-link-text">Ver case completo &rarr;</span>
                         </div>
+                        ` : ''}
                     </div>
                 </article>
                 `).join('')}
@@ -384,6 +396,13 @@ export function initCases() {
         // Fechar pelo botão X
         if (e.target.closest('#modal-close')) {
             closeModal();
+            return;
+        }
+
+        // Clicar no botão CTA dentro do modal
+        if (e.target.closest('.case-modal-btn')) {
+            closeModal();
+            // Permite a ação padrão (ancorar para #aplicacao)
             return;
         }
 
