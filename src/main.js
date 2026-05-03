@@ -7,6 +7,7 @@ import { ProblemSection } from './components/ProblemSection.js';
 import { Services } from './components/Services.js';
 import { Methodology } from './components/Methodology.js';
 import { Cases, initCases } from './components/Cases.js';
+import { ViralReels, initViralReels } from './components/ViralReels.js';
 import { Testimonials } from './components/Testimonials.js';
 import { Strategist } from './components/Strategist.js';
 import { FAQ, initFAQ } from './components/FAQ.js';
@@ -24,6 +25,7 @@ document.querySelector('#app').innerHTML = `
     ${Services()}
     ${Methodology()}
     ${Cases()}
+    ${ViralReels()}
     ${Testimonials()}
     ${Strategist()}
     ${FAQ()}
@@ -38,6 +40,7 @@ initNavbar();
 initFAQ();
 initFooter();
 initCases();
+initViralReels();
 
 // ─── Scroll Reveal with IntersectionObserver ───
 const revealObserver = new IntersectionObserver(
