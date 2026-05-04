@@ -62,10 +62,10 @@ export function ViralReels() {
   `;
 }
 
-function buildSlot(reelIdx, posClass, isCenter) {
+function buildSlot(reelIdx) {
   const r = reelsData[reelIdx];
   const slot = document.createElement('div');
-  slot.className = 'reel-slot ' + posClass;
+  slot.className = 'reel-slot hidden-right'; // Initial hidden state
   slot.dataset.idx = reelIdx;
 
   // Create the video element
@@ -75,7 +75,7 @@ function buildSlot(reelIdx, posClass, isCenter) {
   video.playsInline = true;
   video.loop = true;
   video.muted = true;
-  video.preload = isCenter ? 'auto' : 'metadata';
+  video.preload = 'metadata';
 
   // Tag for viral badge
   const viralTag = document.createElement('div');
@@ -96,12 +96,7 @@ function buildSlot(reelIdx, posClass, isCenter) {
   const soundBtn = document.createElement('button');
   soundBtn.className = 'reel-sound-btn';
   soundBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>'; // Muted icon
-  
-  if(isCenter) {
-      soundBtn.style.display = 'flex';
-  } else {
-      soundBtn.style.display = 'none';
-  }
+  soundBtn.style.display = 'none';
 
   soundBtn.onclick = (e) => {
     e.stopPropagation(); // Prevent slot click
@@ -110,16 +105,14 @@ function buildSlot(reelIdx, posClass, isCenter) {
         soundBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>';
     } else {
         soundBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>';
+        video.play().catch(()=>{});
     }
   };
-
 
   slot.appendChild(viralTag);
   slot.appendChild(video);
   slot.appendChild(cover);
   slot.appendChild(soundBtn);
-
-  // We no longer play here. Playback is controlled by IntersectionObserver in initViralReels.
 
   return slot;
 }
@@ -154,68 +147,79 @@ export function initViralReels() {
   document.addEventListener('keydown', handleUserInteraction);
   document.addEventListener('pointerdown', handleUserInteraction, { passive: true });
 
+  // Create all slots once and keep references
+  const slotElements = reelsData.map((r, i) => {
+    const slot = buildSlot(i);
+    slot.addEventListener('click', () => {
+      if (!slot.classList.contains('center')) {
+        goTo(i);
+      }
+    });
+    stage.appendChild(slot);
+    return slot;
+  });
+
   function updateCenterVideoState() {
-    const centerSlot = stage.querySelector('.reel-slot.center');
-    if (!centerSlot) return;
-    
-    const centerVideo = centerSlot.querySelector('video');
-    const soundBtn = centerSlot.querySelector('.reel-sound-btn');
-    if (!centerVideo) return;
+    slotElements.forEach((slot, i) => {
+      const video = slot.querySelector('video');
+      const soundBtn = slot.querySelector('.reel-sound-btn');
+      if (!video) return;
 
-    const iconMuted = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>';
-    const iconUnmuted = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>';
+      const iconMuted = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>';
+      const iconUnmuted = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>';
 
-    if (isSectionVisible) {
-      centerVideo.muted = false;
-      centerVideo.play().then(() => {
-        // Successfully playing with sound
-        if (soundBtn) soundBtn.innerHTML = iconUnmuted;
-      }).catch((err) => {
-        // Browser blocked autoplay with sound (requires user interaction first)
-        // Fallback to muted autoplay
-        centerVideo.muted = true;
-        centerVideo.play().catch(() => {});
-        if (soundBtn) soundBtn.innerHTML = iconMuted;
-      });
-    } else {
-      // Scrolled out of view
-      centerVideo.pause();
-      centerVideo.muted = true;
-      if (soundBtn) soundBtn.innerHTML = iconMuted;
-    }
+      if (i === cur) {
+        if (isSectionVisible) {
+          video.muted = false;
+          const p = video.play();
+          if (p !== undefined) {
+             p.then(() => { if (soundBtn) soundBtn.innerHTML = iconUnmuted; })
+              .catch(() => { 
+                 video.muted = true; 
+                 video.play().catch(()=>{}); 
+                 if(soundBtn) soundBtn.innerHTML = iconMuted;
+              });
+          }
+        } else {
+          video.pause();
+          video.muted = true;
+          if (soundBtn) soundBtn.innerHTML = iconMuted;
+        }
+      } else {
+        // Stop playing background videos
+        video.pause();
+        video.muted = true;
+      }
+    });
   }
 
   function render() {
-    // Pause all existing videos before removing them
-    stage.querySelectorAll('.reel-slot video').forEach(v => {
-      v.pause();
-      v.removeAttribute('src');
-      v.load();
-    });
-    // Remove existing reel slots (keep the arrow buttons)
-    stage.querySelectorAll('.reel-slot').forEach(s => s.remove());
+    slotElements.forEach((slot, i) => {
+      // Calculate offset and wrap it for infinite carousel effect
+      let offset = i - cur;
+      const half = Math.floor(reelsData.length / 2);
+      if (offset > half) offset -= reelsData.length;
+      if (offset < -half) offset += reelsData.length;
 
-    const positions = [
-      { offset: -2, cls: 'side-2 left-2'  },
-      { offset: -1, cls: 'side-1 left-1'  },
-      { offset:  0, cls: 'center'          },
-      { offset:  1, cls: 'side-1 right-1' },
-      { offset:  2, cls: 'side-2 right-2' },
-    ];
+      // Assign the correct position class
+      slot.className = 'reel-slot';
+      let isCenter = false;
 
-    positions.forEach(pos => {
-      const idx = (cur + pos.offset + reelsData.length) % reelsData.length;
-      const isCenter = pos.offset === 0;
-      const slot = buildSlot(idx, pos.cls, isCenter);
+      if (offset === 0) { slot.classList.add('center'); isCenter = true; }
+      else if (offset === -1) slot.classList.add('side-1', 'left-1');
+      else if (offset === 1) slot.classList.add('side-1', 'right-1');
+      else if (offset === -2) slot.classList.add('side-2', 'left-2');
+      else if (offset === 2) slot.classList.add('side-2', 'right-2');
+      else if (offset < 0) slot.classList.add('hidden-left');
+      else slot.classList.add('hidden-right');
 
-      // Click on side slots to navigate
-      if (!isCenter) {
-        slot.addEventListener('click', () => {
-          goTo(parseInt(slot.dataset.idx));
-        });
+      // Update sound button visibility
+      const soundBtn = slot.querySelector('.reel-sound-btn');
+      if (isCenter) {
+        soundBtn.style.display = 'flex';
+      } else {
+        soundBtn.style.display = 'none';
       }
-
-      stage.appendChild(slot);
     });
 
     // Update dots
