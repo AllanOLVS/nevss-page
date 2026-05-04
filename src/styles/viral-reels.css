@@ -221,16 +221,6 @@
 .side-arrow.arr-right { right: max(16px, calc(50% - 560px)); }
 .side-arrow.disabled  { opacity: 0.25; pointer-events: none; }
 
-.arr {
-  width: 12px;
-  height: 12px;
-  border-top: 3px solid #fff;
-  border-right: 3px solid #fff;
-}
-
-.arr.l { transform: rotate(-135deg) translate(2px, 2px); }
-.arr.r { transform: rotate(45deg) translate(-2px, 2px); }
-
 /* ── Dots ── */
 
 .dots-row {

@@ -44,10 +44,10 @@ export function ViralReels() {
 
     <div class="stage" id="reels-stage">
       <button class="side-arrow arr-left" id="reelBtnPrev" aria-label="Reel anterior">
-        <span class="arr l"></span>
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="transform: translateX(-2px);"><polyline points="15 18 9 12 15 6"></polyline></svg>
       </button>
       <button class="side-arrow arr-right" id="reelBtnNext" aria-label="Próximo reel">
-        <span class="arr r"></span>
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="transform: translateX(2px);"><polyline points="9 18 15 12 9 6"></polyline></svg>
       </button>
     </div>
 
