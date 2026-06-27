@@ -12,19 +12,31 @@ import video8 from '../assets/videos/video8.mp4';
 import video9 from '../assets/videos/video9.mp4';
 import video10 from '../assets/videos/video10.mp4';
 import video11 from '../assets/videos/video11.mp4';
+import video12 from '../assets/videos/video12.mp4';
+import video13 from '../assets/videos/video13.mp4';
+import video14 from '../assets/videos/video14.mp4';
+import video15 from '../assets/videos/video15.mp4';
+import video16 from '../assets/videos/video16.mp4';
+import video17 from '../assets/videos/video17.mp4';
 
 const reelsData = [
-  { src: video1,  client: 'Dress — Moda Feminina',    desc: 'Ensaio que elevou o padrão da marca',             views: '280K', likes: '14K' },
-  { src: video2,  client: 'Duê Fitness',               desc: 'Reel que trouxe +3 mil seguidores',               views: '420K', likes: '22K' },
-  { src: video3,  client: 'ECAP — Produtora',          desc: 'Campanha que gerou +165% em leads',               views: '195K', likes: '9K'  },
-  { src: video4,  client: 'Maria Bonita — Moda',       desc: 'Conteúdo que transformou seguidores em clientes',  views: '310K', likes: '17K' },
-  { src: video5,  client: 'Lune — Estética',           desc: 'Vídeo que lotou a agenda em 48h',                 views: '510K', likes: '31K' },
-  { src: video6,  client: 'Atrevida Modas',            desc: 'Campanha com +320% de crescimento orgânico',      views: '390K', likes: '25K' },
-  { src: video7,  client: 'Studio Fashion',            desc: 'Bastidores que viralizou no segmento',             views: '670K', likes: '42K' },
-  { src: video8,  client: 'Top 20 — Varejo',           desc: 'Conteúdo ágil que manteve a presença ativa',       views: '240K', likes: '12K' },
-  { src: video9,  client: 'Meridiano Geotecnologias',  desc: 'Autoridade técnica traduzida em conteúdo viral',   views: '185K', likes: '8K'  },
-  { src: video10, client: 'Mais Vida',                 desc: 'Produção que conectou marca e comunidade',         views: '330K', likes: '19K' },
-  { src: video11, client: 'NEVSS — Agência',           desc: 'Conteúdo que posicionou a marca como referência',  views: '150K', likes: '7K'  },
+  { src: video1, client: '@ATREVIDAMODASLOJA', desc: 'Ensaio que elevou o padrão da marca', views: '280K', likes: '14K' },
+  { src: video2, client: '@DRESS_BTB', desc: 'Reel que trouxe +3 mil seguidores', views: '420K', likes: '22K' },
+  { src: video3, client: '@DUEFITNESSWEAR', desc: 'Campanha que gerou +165% em leads', views: '195K', likes: '9K' },
+  { src: video4, client: '@DUEFITNESSWEAR', desc: 'Conteúdo que transformou seguidores em clientes', views: '310K', likes: '17K' },
+  { src: video5, client: '@DRESS_BTB', desc: 'Vídeo que lotou a agenda em 48h', views: '510K', likes: '31K' },
+  { src: video6, client: '@DRESS_BTB', desc: 'Campanha com +320% de crescimento orgânico', views: '390K', likes: '25K' },
+  { src: video7, client: '@LOJAMARIABONITA.PTN', desc: 'Bastidores que viralizou no segmento', views: '670K', likes: '42K' },
+  { src: video8, client: '@LOJAMARIABONITA.PTN', desc: 'Conteúdo ágil que manteve a presença ativa', views: '240K', likes: '12K' },
+  { src: video9, client: '@MERIDIANO.GEO', desc: 'Autoridade técnica traduzida em conteúdo viral', views: '185K', likes: '8K' },
+  { src: video10, client: '@MERIDIANO.GEO', desc: 'Produção que conectou marca e comunidade', views: '330K', likes: '19K' },
+  { src: video11, client: '@MERIDIANO.GEO', desc: 'Conteúdo que posicionou a marca como referência', views: '150K', likes: '7K' },
+  { src: video12, client: '@MYKANAFARM', desc: 'Conteúdo com alto engajamento', views: '1.1M', likes: '43,4 mil' },
+  { src: video13, client: '@JUPOLIDOINDICA', desc: 'Conteúdo com alto engajamento', views: '689 mil', likes: '34 mil' },
+  { src: video14, client: '@DRESS_BTB', desc: 'Conteúdo com alto engajamento', views: '2.6M', likes: '224,9 mil' },
+  { src: video15, client: '@DRESS_BTB', desc: 'Conteúdo com alto engajamento', views: '329 mil', likes: '5,4 mil' },
+  { src: video16, client: '@JUPOLIDOINDICA', desc: 'Conteúdo com alto engajamento', views: '229 mil', likes: '7,9 mil' },
+  { src: video17, client: '@PROMONAFARM', desc: 'Conteúdo com alto engajamento', views: '194 mil', likes: '4,7 mil' },
 ];
 
 export function ViralReels() {
@@ -89,8 +101,8 @@ function buildSlot(reelIdx) {
     '<p class="reel-client">' + r.client + '</p>' +
     '<p class="reel-desc">' + r.desc + '</p>' +
     '<div class="reel-stats">' +
-      '<span class="reel-stat">▶ ' + r.views + ' views</span>' +
-      '<span class="reel-stat">♥ ' + r.likes + '</span>' +
+    '<span class="reel-stat">▶ ' + r.views + ' views</span>' +
+    '<span class="reel-stat">♥ ' + r.likes + '</span>' +
     '</div>';
 
   const soundBtn = document.createElement('button');
@@ -102,10 +114,10 @@ function buildSlot(reelIdx) {
     e.stopPropagation(); // Prevent slot click
     video.muted = !video.muted;
     if (video.muted) {
-        soundBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>';
+      soundBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>';
     } else {
-        soundBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>';
-        video.play().catch(()=>{});
+      soundBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>';
+      video.play().catch(() => { });
     }
   };
 
@@ -129,7 +141,7 @@ export function initViralReels() {
   // Global interaction listener to bypass browser autoplay policies
   function handleUserInteraction() {
     userHasInteracted = true;
-    
+
     // If section is visible and we just gained interaction rights, try unmuting
     if (isSectionVisible) {
       updateCenterVideoState();
@@ -173,11 +185,11 @@ export function initViralReels() {
           video.muted = false;
           const p = video.play();
           if (p !== undefined) {
-             p.then(() => { if (soundBtn) soundBtn.innerHTML = iconUnmuted; })
-              .catch(() => { 
-                 video.muted = true; 
-                 video.play().catch(()=>{}); 
-                 if(soundBtn) soundBtn.innerHTML = iconMuted;
+            p.then(() => { if (soundBtn) soundBtn.innerHTML = iconUnmuted; })
+              .catch(() => {
+                video.muted = true;
+                video.play().catch(() => { });
+                if (soundBtn) soundBtn.innerHTML = iconMuted;
               });
           }
         } else {
@@ -224,7 +236,7 @@ export function initViralReels() {
 
     // Update dots
     dotsRow.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('on', i === cur));
-    
+
     // Play/Mute logic based on visibility
     updateCenterVideoState();
   }
